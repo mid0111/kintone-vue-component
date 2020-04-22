@@ -3,7 +3,7 @@
 
 title: kintone-vue-component
 # url: "https://long-pig.cloudvent.net"
-baseurl:
+baseurl: '/kintone-vue-component'
 google_analytics_key:
 show_full_navigation: true
 

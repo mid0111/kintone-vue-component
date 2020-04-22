@@ -8,7 +8,7 @@ order: 1
 
 ## デモ
 
-![](/images/k-text-basic.png)
+![]({{ "/images/k-text-basic.png" | relative_url }})
 
 ## 使い方
 
