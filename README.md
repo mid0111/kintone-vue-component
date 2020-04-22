@@ -1,24 +1,16 @@
 # kintone-vue-component
 
-## Project setup
-```
-npm install
-```
+> Kintone のデザインに合わせた Vue コンポーネントです。  
+> [kintone/kintone-ui-component](https://github.com/kintone/kintone-ui-component) を元に作成した非公式ライブラリです。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 使い方
 
-### Compiles and minifies for production
-```
-npm run build
-```
+main.js で以下のようにインポートして利用します。
 
-### Lints and fixes files
-```
-npm run lint
-```
+```js
+import Vue from 'vue';
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+import KintoneVueComponent from 'kintone-vue-component';
+import 'kintone-vue-component/dist/kintone-vue-component.css';
+Vue.use(KintoneVueComponent);
+```

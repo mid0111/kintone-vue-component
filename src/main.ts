@@ -1,8 +1,15 @@
-import Vue from "vue";
-import App from "./App.vue";
+import { Vue as _Vue } from 'vue-property-decorator';
+import KText from './components/KText.vue';
 
-Vue.config.productionTip = false;
+interface Components {
+  [key: string]: Record<string, any>;
+}
+const components: Components = { KText };
 
-new Vue({
-  render: h => h(App)
-}).$mount("#app");
+export default {
+  install(Vue: typeof _Vue, options?: any): void {
+    Object.keys(components).forEach(name => {
+      Vue.component(name, components[name]);
+    });
+  }
+};
