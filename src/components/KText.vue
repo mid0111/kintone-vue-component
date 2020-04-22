@@ -17,11 +17,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class KText extends Vue {
-  @Prop()
-  private value!: string;
-  private placeholder?: string;
-  private disabled?: boolean = false;
-  private width?: number = 120;
+  @Prop() private value!: string;
+  @Prop() private placeholder?: string;
+  @Prop({ default: false }) private disabled?: boolean;
+  @Prop({ default: 120 }) private width?: number;
 
   private onChange(event: Event) {
     if (event.target instanceof HTMLInputElement) {

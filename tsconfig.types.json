@@ -18,7 +18,7 @@
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "files": ["src/main.ts"],
+  "files": ["src/components/index.ts"],
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",

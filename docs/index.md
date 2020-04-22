@@ -1,38 +1,18 @@
 ---
-title: Welcome
+title: Home
 ---
 
-This is the **Edition** template from [CloudCannon](http://cloudcannon.com/).
-**Edition** is perfect for documenting your product, application or service.
-It's populated with example content to give you some ideas.
+Kintone のデザインに合わせた Vue コンポーネントです。  
+[kintone/kintone-ui-component](https://github.com/kintone/kintone-ui-component) を元に作成した非公式ライブラリです。
 
-ChatApp is a fictional chat application for sending messages and media to others.
-Teams and friend groups would use ChatApp to stay up to date if it existed.
+### 使い方
 
-> [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/).
+`main.js` で以下のようにインポートして利用します。
 
-### Getting Started
+```js
+import Vue from 'vue';
 
-Getting a message sent is quick and easy with ChatApp:
-
-1. Sign up for an account
-2. Add your friends from their email addresses
-3. Type a message or send a photo
-
-> Feel free to send us a message at [feedback@example.com](mailto:feedback@example.com) with your feedback.
-
-### Features
-
-Explore more of ChatApp by reading about our features:
-
-#### Media
-
-Send images, videos and other media to people. Sources include your computer, phone and Facebook.
-
-#### Contact Syncing
-
-Sync your contact list with your phone and/or Facebook contacts. Never lose your contacts between devices again!
-
-#### Devices
-
-ChatApp is available everywhere. Find out how to set it up on your all your devices.
+import KintoneVueComponent from 'kintone-vue-component';
+import 'kintone-vue-component/dist/kintone-vue-component.css';
+Vue.use(KintoneVueComponent);
+```

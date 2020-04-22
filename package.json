@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "demo": "vue-cli-service serve",
     "build:type": "tsc --emitDeclarationOnly --declaration -P tsconfig.types.json",
-    "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/main.ts",
+    "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/components/index.ts",
     "build": "run-s --print-label build:lib build:type",
     "lint": "vue-cli-service lint"
   },
   "main": "./dist/kintone-vue-component.common.js",
-  "typings": "dist/types/main.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
