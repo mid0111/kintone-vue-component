@@ -17,34 +17,26 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import KIconButton from './KIconButton.vue';
 
-export default {
+@Component({
   components: {
     KIconButton
-  },
-
-  props: {
-    visible: {
-      type: Boolean,
-      default: true,
-      required: false
-    }
-  },
-
-  computed: {
-    hidden() {
-      return this.visible === false;
-    }
-  },
-
-  methods: {
-    onClose() {
-      this.$emit('close');
-    }
   }
-};
+})
+export default class KDialog extends Vue {
+  @Prop({ default: true }) private visible?: boolean;
+
+  private get hidden(): boolean {
+    return this.visible === false;
+  }
+
+  private onClose() {
+    this.$emit('close');
+  }
+}
 </script>
 
 <style scoped>
