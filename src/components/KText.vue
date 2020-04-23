@@ -13,28 +13,41 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component
-export default class KText extends Vue {
-  @Prop() private value!: string;
-  @Prop() private placeholder?: string;
-  @Prop({ default: false }) private disabled?: boolean;
-  @Prop({ default: 120 }) private width?: number;
-
-  private onChange(event: Event) {
-    if (event.target instanceof HTMLInputElement) {
-      this.$emit('change', event.target.value);
+<script>
+export default {
+  props: {
+    value: {
+      type: String,
+      default: '',
+      required: true
+    },
+    placeholder: {
+      type: String,
+      default: '',
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
+    width: {
+      type: Number,
+      default: 120,
+      required: false
     }
-  }
+  },
 
-  private onInput(event: Event) {
-    if (event.target instanceof HTMLInputElement) {
+  methods: {
+    onChange(event) {
+      this.$emit('change', event.target.value);
+    },
+
+    onInput(event) {
       this.$emit('input', event.target.value);
     }
   }
-}
+};
 </script>
 
 <style lang="css" scoped>

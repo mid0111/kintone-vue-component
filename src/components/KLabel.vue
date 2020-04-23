@@ -5,23 +5,40 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script>
+export default {
+  props: {
+    text: {
+      type: String,
+      default: '',
+      required: true
+    },
+    textColor: {
+      type: String,
+      default: '',
+      required: false
+    },
+    backgroundColor: {
+      type: String,
+      default: '',
+      required: false
+    },
+    required: {
+      type: Boolean,
+      default: false,
+      required: false
+    }
+  },
 
-@Component
-export default class KLabel extends Vue {
-  @Prop({ default: '' }) private text!: string;
-  @Prop({ default: '' }) private textColor?: string;
-  @Prop({ default: '' }) private backgroundColor?: string;
-  @Prop({ default: false }) private required?: boolean;
-
-  get style() {
-    return {
-      color: '' || this.textColor,
-      backgroundColor: '' || this.backgroundColor
-    };
+  computed: {
+    style() {
+      return {
+        color: '' || this.textColor,
+        backgroundColor: '' || this.backgroundColor
+      };
+    }
   }
-}
+};
 </script>
 
 <style lang="css" scoped>

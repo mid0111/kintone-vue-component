@@ -9,23 +9,37 @@
   </button>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script>
+export default {
+  props: {
+    text: {
+      type: String,
+      default: '',
+      required: true
+    },
+    type: {
+      type: String,
+      default: 'normal',
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      required: false
+    }
+  },
 
-@Component
-export default class KButton extends Vue {
-  @Prop({ default: '' }) private text!: string;
-  @Prop({ default: 'normal' }) type?: string;
-  @Prop({ default: false }) disabled?: boolean;
-
-  private get typeClass(): string {
-    return this.type === 'submit' ? 'submit' : 'normal';
+  computed: {
+    typeClass() {
+      return this.type === 'submit' ? 'submit' : 'normal';
+    }
+  },
+  methods: {
+    onClick() {
+      this.$emit('click');
+    }
   }
-
-  private onClick() {
-    this.$emit('click');
-  }
-}
+};
 </script>
 
 <style scoped>

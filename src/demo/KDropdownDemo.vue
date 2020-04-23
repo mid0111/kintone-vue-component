@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import KDropdown, { Item } from '../components/KDropdown.vue';
+import KDropdown from '../components/KDropdown.vue';
 
 @Component({
   components: {
@@ -15,7 +15,7 @@ import KDropdown, { Item } from '../components/KDropdown.vue';
   }
 })
 export default class KDropdownDemo extends Vue {
-  items: Array<Item> = [
+  items: Array<object> = [
     {
       label: '---',
       value: null
@@ -33,6 +33,6 @@ export default class KDropdownDemo extends Vue {
       value: 'アイテム3'
     }
   ];
-  selectedValue: Item['value'] = null;
+  selectedValue = null;
 }
 </script>

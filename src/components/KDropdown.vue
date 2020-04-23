@@ -29,73 +29,90 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
+<script>
 import { mdiChevronDown } from '@mdi/js';
 import KItem from './KItem.vue';
 
-export interface Item {
-  label: string;
-  value: string | number | null;
-}
-@Component({
+export default {
   components: {
     KItem
-  }
-})
-export default class KDropdown extends Vue {
-  @Prop({ default: () => [] }) items!: Array<Item>;
-  @Prop({ default: null }) value?: Item['value'];
-  @Prop({ default: false }) disabled?: boolean;
+  },
 
-  mdiChevronDown = mdiChevronDown;
-  visibleItems = false;
-
-  get selected() {
-    let index = -1;
-    this.items &&
-      this.items.forEach((item: Item, i: number) => {
-        if (item.value === this.value) {
-          index = i;
-        }
-      });
-
-    if (index === -1) {
-      return '';
+  props: {
+    items: {
+      type: Array,
+      defaut: () => [],
+      required: true
+    },
+    value: {
+      type: String,
+      defaut: null,
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      defaut: false,
+      required: false
     }
-    return this.items[index].label;
-  }
+  },
 
-  get displayStyle() {
-    return this.visibleItems && !this.disabled
-      ? { display: 'block' }
-      : { display: 'none' };
-  }
+  data() {
+    return {
+      mdiChevronDown,
+      visibleItems: false
+    };
+  },
 
-  toggleShowItems() {
-    this.visibleItems = !this.visibleItems;
-  }
+  computed: {
+    selected() {
+      let index = -1;
+      this.items &&
+        this.items.forEach((item, i) => {
+          if (item.value === this.value) {
+            index = i;
+          }
+        });
 
-  close() {
-    this.visibleItems = false;
-  }
+      if (index === -1) {
+        return '';
+      }
+      return this.items[index].label;
+    },
 
-  onClickItem(value: Item['value']) {
-    this.$emit('input', value);
-    this.visibleItems = false;
-  }
+    displayStyle() {
+      return this.visibleItems && !this.disabled
+        ? { display: 'block' }
+        : { display: 'none' };
+    }
+  },
 
-  @Watch('visibleItems')
-  onVisibleChange(current: boolean, old: boolean) {
-    if (old === false) {
-      setTimeout(() => {
-        document.addEventListener('click', this.close, false);
-      }, 250);
-    } else {
-      document.removeEventListener('click', this.close, false);
+  methods: {
+    toggleShowItems() {
+      this.visibleItems = !this.visibleItems;
+    },
+
+    close() {
+      this.visibleItems = false;
+    },
+
+    onClickItem(value) {
+      this.$emit('input', value);
+      this.visibleItems = false;
+    }
+  },
+
+  watch: {
+    visibleItems(current, old) {
+      if (old === false) {
+        setTimeout(() => {
+          document.addEventListener('click', this.close, false);
+        }, 250);
+      } else {
+        document.removeEventListener('click', this.close, false);
+      }
     }
   }
-}
+};
 </script>
 
 <style scoped>
