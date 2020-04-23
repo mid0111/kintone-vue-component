@@ -70,9 +70,12 @@
 		</header>
 
 		<section class="main">
-			<div class="page-header">
+			<div class="page-header clearfix">
 				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
-				<h3>{{ page.title }}</h3>
+				<h3 class="float-left">{{ page.title }}</h3>
+				{% if page.demo %}
+				<a class="float-right demo-link" href="{{site.baseurl}}/demo#{{page.demo}}" target="_blank">デモ<img src="{{ site.baseurl }}/images/open.svg" width="20" height="20" alt="open"></a>
+				{% endif %}
 			</div>
 			<article class="content">
 				{{ content }}

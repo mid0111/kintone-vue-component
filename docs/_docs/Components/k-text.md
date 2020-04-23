@@ -2,6 +2,7 @@
 title: k-text
 category: Components
 order: 1
+demo: k-text
 ---
 
 > `k-text` コンポーネントはユーザーがテキストを入力するためのテキストフィールドとして使用されます。

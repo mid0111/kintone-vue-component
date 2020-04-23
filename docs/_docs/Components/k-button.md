@@ -2,6 +2,7 @@
 title: k-button
 category: Components
 order: 1
+demo: k-button
 ---
 
 > `k-button` コンポーネントはボタンとして使用されます。

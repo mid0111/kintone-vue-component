@@ -2,6 +2,7 @@
 title: k-dialog
 category: Components
 order: 1
+demo: k-dialog
 ---
 
 > `k-dialog` コンポーネントはダイアログボックスの表示に使用されます。
