@@ -10,6 +10,9 @@
       <component-title title="k-dialog" />
       <k-dialog-demo />
 
+      <component-title title="k-dropdown" />
+      <k-dropdown-demo />
+
       <component-title title="k-text" />
       <k-text-demo />
     </div>
@@ -21,6 +24,7 @@ import Navigation from './demo/Navigation.vue';
 import ComponentTitle from './demo/ComponentTitle.vue';
 import KButtonDemo from './demo/KButtonDemo.vue';
 import KDialogDemo from './demo/KDialogDemo.vue';
+import KDropdownDemo from './demo/KDropdownDemo.vue';
 import KTextDemo from './demo/KTextDemo.vue';
 
 export default {
@@ -30,12 +34,13 @@ export default {
     ComponentTitle,
     KButtonDemo,
     KDialogDemo,
+    KDropdownDemo,
     KTextDemo
   },
 
   data() {
     return {
-      components: ['k-button', 'k-dialog', 'k-text']
+      components: ['k-button', 'k-dialog', 'k-dropdown', 'k-text']
     };
   }
 };

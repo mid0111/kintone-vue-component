@@ -29,74 +29,58 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import { mdiChevronDown } from '@mdi/js';
 import KItem from './KItem.vue';
 
-export default {
-  props: {
-    value: {
-      type: String,
-      default: null,
-      required: false
-    },
-    items: {
-      type: Array,
-      default: () => [],
-      required: true
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
-  },
-
+export interface Item {
+  label: string;
+  value: string | number | null;
+}
+@Component({
   components: {
     KItem
-  },
-
-  computed: {
-    selected() {
-      let index = -1;
-      this.items &&
-        this.items.forEach((item, i) => {
-          if (item.value === this.value) {
-            index = i;
-          }
-        });
-
-      if (index === -1) {
-        return '';
-      }
-      return this.items[index].label;
-    },
-
-    displayStyle() {
-      return this.visibleItems && !this.isDisabled
-        ? { display: 'block' }
-        : { display: 'none' };
-    }
-  },
-
-  data() {
-    return {
-      mdiChevronDown,
-      visibleItems: false
-    };
-  },
-
-  methods: {
-    toggleShowItems() {
-      this.visibleItems = !this.visibleItems;
-    },
-
-    onClickItem(value) {
-      this.$emit('change', value);
-      this.visibleItems = false;
-    }
   }
-};
+})
+export default class KDropdown extends Vue {
+  @Prop({ default: () => [] }) items!: Array<Item>;
+  @Prop({ default: null }) value?: string;
+  @Prop({ default: false }) disabled?: boolean;
+
+  mdiChevronDown = mdiChevronDown;
+  visibleItems = false;
+
+  get selected() {
+    let index = -1;
+    this.items &&
+      this.items.forEach((item: Item, i: number) => {
+        if (item.value === this.value) {
+          index = i;
+        }
+      });
+
+    if (index === -1) {
+      return '';
+    }
+    return this.items[index].label;
+  }
+
+  get displayStyle() {
+    return this.visibleItems && !this.disabled
+      ? { display: 'block' }
+      : { display: 'none' };
+  }
+
+  toggleShowItems() {
+    this.visibleItems = !this.visibleItems;
+  }
+
+  onClickItem(value: Item['value']) {
+    this.$emit('input', value);
+    this.visibleItems = false;
+  }
+}
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 import { Vue as _Vue } from 'vue-property-decorator';
 import KButton from './KButton.vue';
 import KDialog from './KDialog.vue';
-import KDropDown from './KDropDown.vue';
+import KDropdown from './KDropdown.vue';
 import KIconButton from './KIconButton.vue';
 import KItem from './KItem.vue';
 import KLabel from './KLabel.vue';
@@ -14,7 +14,7 @@ interface Components {
 const components: Components = {
   KButton,
   KDialog,
-  KDropDown,
+  KDropdown,
   KIconButton,
   KItem,
   KLabel,
