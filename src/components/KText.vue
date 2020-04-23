@@ -6,6 +6,7 @@
       :placeholder="placeholder"
       class="k-input-text"
       @change="onChange"
+      @input="onInput"
       :disabled="disabled"
       :style="{ width: width + 'px' }"
     />
@@ -25,6 +26,12 @@ export default class KText extends Vue {
   private onChange(event: Event) {
     if (event.target instanceof HTMLInputElement) {
       this.$emit('change', event.target.value);
+    }
+  }
+
+  private onInput(event: Event) {
+    if (event.target instanceof HTMLInputElement) {
+      this.$emit('input', event.target.value);
     }
   }
 }

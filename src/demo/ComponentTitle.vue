@@ -1,8 +1,8 @@
 <template>
   <div class="title-container">
-    <a :href="`/#${title}`" class="title-link"
-      ><h2 :id="title">{{ title }}</h2></a
-    >
+    <a :href="`#${title}`" class="title-link">
+      <h2 :id="title">{{ title }}</h2>
+    </a>
   </div>
 </template>
 
