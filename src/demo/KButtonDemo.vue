@@ -1,0 +1,32 @@
+<template>
+  <div class="components">
+    <h3>basic</h3>
+    <div class="clearfix">
+      <k-button
+        class="float-left mr-2"
+        text="保存"
+        type="submit"
+        @click="onClick"
+      />
+      <k-button text="キャンセル" />
+    </div>
+    <h3>disabled</h3>
+    <k-button text="保存" type="submit" disabled />
+  </div>
+</template>
+
+<script>
+import KButton from '../components/KButton.vue';
+
+export default {
+  components: {
+    KButton
+  },
+
+  methods: {
+    onClick() {
+      alert('クリック');
+    }
+  }
+};
+</script>

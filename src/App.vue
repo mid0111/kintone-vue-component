@@ -1,81 +1,42 @@
 <template>
   <div id="app">
     <h1>Demo</h1>
+    <navigation :components="components" />
+
     <div class="main-container">
-      <h2>k-button</h2>
-      <div class="components">
-        <h3>basic</h3>
-        <div class="clearfix">
-          <k-button
-            class="float-left mr-2"
-            text="保存"
-            type="submit"
-            @click="onEvent"
-          />
-          <k-button text="キャンセル" />
-        </div>
-        <h3>disabled</h3>
-        <k-button text="保存" type="submit" disabled />
-      </div>
+      <component-title title="k-button" />
+      <k-button-demo />
 
-      <h2>k-dialog</h2>
-      <div class="components">
-        <h3>basic</h3>
-        <k-button text="ダイアログを開く" @click="toggleDialogOpen" />
-        <k-dialog :visible="showDialog" @close="toggleDialogOpen">
-          <template v-slot:header>ダイアログタイトル</template>
-          <div>コンテンツ</div>
-          <template v-slot:footer>
-            <k-button text="閉じる" @click="toggleDialogOpen" />
-          </template>
-        </k-dialog>
-      </div>
+      <component-title title="k-dialog" />
+      <k-dialog-demo />
 
-      <h2>k-text</h2>
-      <div class="components">
-        <h3>basic</h3>
-        <k-text
-          v-model="value"
-          placeholder="テキストを入力"
-          @change="onEvent"
-        />
-        <h3>disabled</h3>
-        <k-text v-model="value" placeholder="テキストを入力" :disabled="true" />
-        <h3>width</h3>
-        <k-text v-model="value" placeholder="テキストを入力" :width="200" />
-      </div>
+      <component-title title="k-text" />
+      <k-text-demo />
     </div>
   </div>
 </template>
 
 <script>
-import KButton from './components/KButton.vue';
-import KDialog from './components/KDialog.vue';
-import KText from './components/KText.vue';
+import Navigation from './demo/Navigation.vue';
+import ComponentTitle from './demo/ComponentTitle.vue';
+import KButtonDemo from './demo/KButtonDemo.vue';
+import KDialogDemo from './demo/KDialogDemo.vue';
+import KTextDemo from './demo/KTextDemo.vue';
 
 export default {
   name: 'App',
   components: {
-    KButton,
-    KDialog,
-    KText
+    Navigation,
+    ComponentTitle,
+    KButtonDemo,
+    KDialogDemo,
+    KTextDemo
   },
 
   data() {
     return {
-      value: '',
-      showDialog: false
+      components: ['k-button', 'k-dialog', 'k-text']
     };
-  },
-
-  methods: {
-    onEvent(value) {
-      console.log(value);
-    },
-
-    toggleDialogOpen() {
-      this.showDialog = !this.showDialog;
-    }
   }
 };
 </script>
@@ -89,11 +50,21 @@ export default {
   color: #2c3e50;
   margin: 40px 60px;
 }
-
+@media screen and (max-width: 480px) {
+  #app {
+    margin: 40px 4px;
+  }
+}
+nav,
 .main-container {
   text-align: start;
 }
-
+</style>
+<style>
+a {
+  color: #03a9f4;
+  text-decoration: none;
+}
 .components {
   margin: 20px;
 }
