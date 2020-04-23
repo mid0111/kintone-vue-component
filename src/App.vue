@@ -13,6 +13,9 @@
       <component-title title="k-dropdown" />
       <k-dropdown-demo />
 
+      <component-title title="k-icon-button" />
+      <k-icon-button-demo />
+
       <component-title title="k-text" />
       <k-text-demo />
     </div>
@@ -25,6 +28,7 @@ import ComponentTitle from './demo/ComponentTitle.vue';
 import KButtonDemo from './demo/KButtonDemo.vue';
 import KDialogDemo from './demo/KDialogDemo.vue';
 import KDropdownDemo from './demo/KDropdownDemo.vue';
+import KIconButtonDemo from './demo/KIconButtonDemo.vue';
 import KTextDemo from './demo/KTextDemo.vue';
 
 export default {
@@ -35,12 +39,19 @@ export default {
     KButtonDemo,
     KDialogDemo,
     KDropdownDemo,
+    KIconButtonDemo,
     KTextDemo
   },
 
   data() {
     return {
-      components: ['k-button', 'k-dialog', 'k-dropdown', 'k-text']
+      components: [
+        'k-button',
+        'k-dialog',
+        'k-dropdown',
+        'k-icon-button',
+        'k-text'
+      ]
     };
   }
 };
@@ -82,6 +93,13 @@ a {
   content: '';
   display: block;
   clear: both;
+}
+
+.box {
+  display: flex;
+}
+.box > * {
+  margin-left: 8px;
 }
 
 .mr-2 {

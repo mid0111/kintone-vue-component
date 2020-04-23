@@ -11,7 +11,8 @@
   </button>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import {
   mdiPlus,
   mdiMinus,
@@ -21,87 +22,62 @@ import {
   mdiChevronLeft
 } from '@mdi/js';
 
-export default {
-  props: {
-    type: {
-      type: String,
-      default: null,
-      required: false
-    },
-    size: {
-      type: String,
-      default: null,
-      required: false
-    },
-    color: {
-      type: String,
-      default: null,
-      required: false
-    },
-    shape: {
-      type: String,
-      default: null,
-      required: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
-  },
+@Component
+export default class KIconButton extends Vue {
+  @Prop({ default: 'insert' }) private type?: string;
+  @Prop({ default: 'large' }) private size?: string;
+  @Prop({ default: 'gray' }) private color?: string;
+  @Prop({ default: 'circle' }) private shape?: string;
+  @Prop({ default: false }) private disabled?: string;
 
-  computed: {
-    sizeClass() {
-      const className = this.size === 'small' ? 'small' : 'large';
-      return className;
-    },
-
-    typeClass() {
-      return this.type === 'remove' && this.colorClass === 'gray'
-        ? 'hover-danger'
-        : '';
-    },
-
-    colorClass() {
-      const colors = ['gray', 'blue', 'red', 'green', 'transparent'];
-      return colors.indexOf(this.color) === -1 ? 'gray' : this.color;
-    },
-
-    shapeClass() {
-      return this.shape === 'normal' ? 'normal' : 'circle';
-    },
-
-    iconData() {
-      let iconData = mdiPlus;
-      switch (this.type) {
-        case 'insert':
-          break;
-        case 'remove':
-          iconData = mdiMinus;
-          break;
-        case 'close':
-          iconData = mdiClose;
-          break;
-        case 'file':
-          iconData = mdiFile;
-          break;
-        case 'right':
-          iconData = mdiChevronRight;
-          break;
-        case 'left':
-          iconData = mdiChevronLeft;
-          break;
-      }
-      return iconData;
-    }
-  },
-
-  methods: {
-    onClick() {
-      this.$emit('click');
-    }
+  get sizeClass(): string {
+    const className = this.size === 'small' ? 'small' : 'large';
+    return className;
   }
-};
+
+  get typeClass(): string {
+    return this.type === 'remove' && this.colorClass === 'gray'
+      ? 'hover-danger'
+      : '';
+  }
+
+  get colorClass(): string {
+    const colors = ['gray', 'blue', 'red', 'green', 'transparent'];
+    return colors.indexOf(this.color) === -1 ? 'gray' : this.color;
+  }
+
+  get shapeClass(): string {
+    return this.shape === 'normal' ? 'normal' : 'circle';
+  }
+
+  get iconData() {
+    let iconData = mdiPlus;
+    switch (this.type) {
+      case 'insert':
+        break;
+      case 'remove':
+        iconData = mdiMinus;
+        break;
+      case 'close':
+        iconData = mdiClose;
+        break;
+      case 'file':
+        iconData = mdiFile;
+        break;
+      case 'right':
+        iconData = mdiChevronRight;
+        break;
+      case 'left':
+        iconData = mdiChevronLeft;
+        break;
+    }
+    return iconData;
+  }
+
+  onClick() {
+    this.$emit('click');
+  }
+}
 </script>
 
 <style scoped>
