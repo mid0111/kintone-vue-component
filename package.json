@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "demo": "vue-cli-service serve",
+    "build-demo": "vue-cli-service build --target app --dest docs/demo ./src/main.ts",
     "build:type": "tsc --emitDeclarationOnly --declaration -P tsconfig.types.json",
     "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/components/index.ts",
     "build": "run-s --print-label build:lib build:type",
