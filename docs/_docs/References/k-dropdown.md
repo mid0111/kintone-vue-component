@@ -1,6 +1,6 @@
 ---
 title: k-dropdown
-category: Components
+category: References
 order: 1
 demo: k-dropdown
 ---

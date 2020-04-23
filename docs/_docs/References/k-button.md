@@ -1,6 +1,6 @@
 ---
 title: k-button
-category: Components
+category: References
 order: 1
 demo: k-button
 ---

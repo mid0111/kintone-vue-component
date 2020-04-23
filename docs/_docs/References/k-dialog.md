@@ -1,6 +1,6 @@
 ---
 title: k-dialog
-category: Components
+category: References
 order: 1
 demo: k-dialog
 ---

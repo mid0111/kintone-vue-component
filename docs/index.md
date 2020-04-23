@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Quick Start
 ---
 
 Kintone のデザインに合わせた Vue コンポーネントです。  
