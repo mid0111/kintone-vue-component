@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 import { mdiChevronDown } from '@mdi/js';
 import KItem from './KItem.vue';
 
@@ -45,7 +45,7 @@ export interface Item {
 })
 export default class KDropdown extends Vue {
   @Prop({ default: () => [] }) items!: Array<Item>;
-  @Prop({ default: null }) value?: string;
+  @Prop({ default: null }) value?: Item['value'];
   @Prop({ default: false }) disabled?: boolean;
 
   mdiChevronDown = mdiChevronDown;
@@ -76,9 +76,24 @@ export default class KDropdown extends Vue {
     this.visibleItems = !this.visibleItems;
   }
 
+  close() {
+    this.visibleItems = false;
+  }
+
   onClickItem(value: Item['value']) {
     this.$emit('input', value);
     this.visibleItems = false;
+  }
+
+  @Watch('visibleItems')
+  onVisibleChange(current: boolean, old: boolean) {
+    if (old === false) {
+      setTimeout(() => {
+        document.addEventListener('click', this.close, false);
+      }, 250);
+    } else {
+      document.removeEventListener('click', this.close, false);
+    }
   }
 }
 </script>
