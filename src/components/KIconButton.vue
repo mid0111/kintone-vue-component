@@ -43,6 +43,9 @@ export default class KIconButton extends Vue {
 
   get colorClass(): string {
     const colors = ['gray', 'blue', 'red', 'green', 'transparent'];
+    if (!this.color) {
+      return 'gray';
+    }
     return colors.indexOf(this.color) === -1 ? 'gray' : this.color;
   }
 

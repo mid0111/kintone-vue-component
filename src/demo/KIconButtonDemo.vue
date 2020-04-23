@@ -7,7 +7,7 @@
       <k-icon-button type="close" color="gray" />
       <k-icon-button type="file" color="green" />
       <k-icon-button type="right" color="gray" />
-      <k-icon-button type="left" color="gray" />
+      <k-icon-button type="left" color="transparent" />
     </div>
     <h3>square</h3>
     <div class="box">
@@ -16,7 +16,7 @@
       <k-icon-button shape="normal" type="close" color="gray" />
       <k-icon-button shape="normal" type="file" color="green" />
       <k-icon-button shape="normal" type="right" color="gray" />
-      <k-icon-button shape="normal" type="left" color="gray" />
+      <k-icon-button shape="normal" type="left" color="transparent" />
     </div>
     <h3>small</h3>
     <div class="box">
