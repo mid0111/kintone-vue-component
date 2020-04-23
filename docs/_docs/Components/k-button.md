@@ -32,9 +32,9 @@ export default {
 
 | Name     | Description                                                        | Type    | Required |
 | -------- | ------------------------------------------------------------------ | ------- | -------- |
+| disabled | disabled にするかどうか.<br>デフォルト値: 'false'                  | Boolean | No       |
 | text     | ボタンの名前.<br>デフォルト値: ''                                  | String  | Yes      |
 | type     | ボタンのタイプ.<br>・normal<br>・submit <br>デフォルト値: 'normal' | String  | No       |
-| disabled | disabled にするかどうか.<br>デフォルト値: 'false'                  | Boolean | No       |
 
 ## Event
 

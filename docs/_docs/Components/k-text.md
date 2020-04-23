@@ -32,9 +32,9 @@ export default {
 
 | Name        | Description                                                            | Type    | Required |
 | ----------- | ---------------------------------------------------------------------- | ------- | -------- |
-| value       | テキストフィールドの入力値。                                           | String  | Yes      |
-| placeholder | テキストフィールドのプレースホルダー.<br>デフォルト値: ''              | String  | No       |
 | disabled    | テキストフィールドを disabled にするかどうか.<br>デフォルト値: 'false' | Boolean | No       |
+| placeholder | テキストフィールドのプレースホルダー.<br>デフォルト値: ''              | String  | No       |
+| value       | テキストフィールドの入力値。                                           | String  | Yes      |
 | width       | テキストフィールドの幅（ピクセル）.                                    | Number  | No       |
 
 ## Event
