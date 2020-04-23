@@ -14,3 +14,7 @@ import KintoneVueComponent from 'kintone-vue-component';
 import 'kintone-vue-component/dist/kintone-vue-component.css';
 Vue.use(KintoneVueComponent);
 ```
+
+## ドキュメント
+
+https://mid0111.github.io/kintone-vue-component/
