@@ -22,6 +22,9 @@
       <component-title title="k-spinner" />
       <k-spinner-demo />
 
+      <component-title title="k-table" />
+      <k-table-demo />
+
       <component-title title="k-text-button" />
       <k-text-button-demo />
 
@@ -40,6 +43,7 @@ import KDropdownDemo from './demo/KDropdownDemo.vue';
 import KIconButtonDemo from './demo/KIconButtonDemo.vue';
 import KLabelDemo from './demo/KLabelDemo.vue';
 import KSpinnerDemo from './demo/KSpinnerDemo.vue';
+import KTableDemo from './demo/KTableDemo.vue';
 import KTextDemo from './demo/KTextDemo.vue';
 import KTextButtonDemo from './demo/KTextButtonDemo.vue';
 
@@ -54,6 +58,7 @@ export default {
     KIconButtonDemo,
     KLabelDemo,
     KSpinnerDemo,
+    KTableDemo,
     KTextButtonDemo,
     KTextDemo
   },
@@ -67,6 +72,7 @@ export default {
         'k-icon-button',
         'k-label',
         'k-spinner',
+        'k-table',
         'k-text-button',
         'k-text'
       ]
