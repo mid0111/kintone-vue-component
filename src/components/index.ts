@@ -5,6 +5,7 @@ import KDropdown from './KDropdown.vue';
 import KIconButton from './KIconButton.vue';
 import KItem from './KItem.vue';
 import KLabel from './KLabel.vue';
+import KSpinner from './KSpinner.vue';
 import KText from './KText.vue';
 import KTextButton from './KTextButton.vue';
 
@@ -18,6 +19,7 @@ const components: Components = {
   KIconButton,
   KItem,
   KLabel,
+  KSpinner,
   KText,
   KTextButton
 };
