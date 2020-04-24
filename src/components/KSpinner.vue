@@ -1,7 +1,7 @@
 <template>
   <div v-if="visible" class="k-spinner-outer">
     <div class="k-spinner">
-      <div class="k-loader" />
+      <div class="k-loader" :class="[loadingClass]" />
     </div>
   </div>
 </template>
@@ -13,6 +13,17 @@ export default {
       type: Boolean,
       default: true,
       required: false
+    },
+    type: {
+      type: String,
+      default: 'normal',
+      require: false
+    }
+  },
+
+  computed: {
+    loadingClass() {
+      return this.type === 'ring' ? 'ring' : 'normal';
     }
   }
 };
@@ -35,19 +46,195 @@ export default {
   transform: translate(-50%, -50%);
 }
 .k-loader {
+  border-radius: 50%;
+}
+.k-loader.normal {
+  width: 1em;
+  height: 1em;
+  font-size: 10px;
+  -webkit-animation: k-load 1.1s infinite ease;
+  animation: k-load 1.1s infinite ease;
+}
+.k-loader.ring {
   width: 3.5em;
   height: 3.5em;
-  border-radius: 50%;
   border: 6px solid transparent;
   border-top-color: #3498db;
   border-bottom-color: white;
   border-left-color: white;
   border-right-color: white;
-  -webkit-animation: k-load 1.1s infinite ease;
-  animation: k-load 1.1s infinite ease;
+  -webkit-animation: k-ring-load 1.1s infinite ease;
+  animation: k-ring-load 1.1s infinite ease;
 }
 
 @keyframes k-load {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.8),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.5),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.7),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.8),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.5),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.7),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.8),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.5),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.7),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.8),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.5),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.7),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.8),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.5),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.7),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.8),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.5),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.7),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.8),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.5),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.7),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 1);
+  }
+}
+@keyframes k-load {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.8),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.5),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.7),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.8),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.5),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.7),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.8),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.5),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.7),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.8),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.5),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.7),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.8),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.2),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.5),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.7),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.8),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.5),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.7),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.8),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(52, 152, 219, 0.2),
+      1.8em -1.8em 0 0em rgba(52, 152, 219, 0.2),
+      2.5em 0em 0 0em rgba(52, 152, 219, 0.2),
+      1.75em 1.75em 0 0em rgba(52, 152, 219, 0.2),
+      0em 2.5em 0 0em rgba(52, 152, 219, 0.2),
+      -1.8em 1.8em 0 0em rgba(52, 152, 219, 0.5),
+      -2.6em 0em 0 0em rgba(52, 152, 219, 0.7),
+      -1.8em -1.8em 0 0em rgba(52, 152, 219, 1);
+  }
+}
+
+@keyframes k-ring-load {
   0% {
     transform: rotate(0deg);
   }
@@ -161,7 +348,7 @@ export default {
   }
 }
 
-@-webkit-keyframes k-load {
+@-webkit-keyframes k-ring-load {
   0% {
     transform: rotate(0deg);
   }

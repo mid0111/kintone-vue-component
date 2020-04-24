@@ -1,8 +1,12 @@
 <template>
   <div class="components">
     <h3>basic</h3>
-    <k-button text="表示" @click="show" />
-    <k-spinner :visible="loading" />
+    <div class="box">
+      <k-button text="normal" @click="show" />
+      <k-button text="ring" @click="showRing" />
+    </div>
+    <k-spinner :visible="normalLoading" />
+    <k-spinner type="ring" :visible="ringLoading" />
   </div>
 </template>
 
@@ -18,14 +22,19 @@ export default {
 
   data() {
     return {
-      loading: false
+      normalLoading: false,
+      ringLoading: false
     };
   },
 
   methods: {
     show() {
-      this.loading = true;
-      document.addEventListener('click', () => (this.loading = false));
+      this.normalLoading = true;
+      document.addEventListener('click', () => (this.normalLoading = false));
+    },
+    showRing() {
+      this.ringLoading = true;
+      document.addEventListener('click', () => (this.ringLoading = false));
     }
   }
 };
