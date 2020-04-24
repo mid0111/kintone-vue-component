@@ -85,10 +85,12 @@ export default {
 
 | Name               | Description                                       | Type                | Required |
 | ------------------ | ------------------------------------------------- | ------------------- | -------- |
+| fixedHeader        | ヘッダを固定するかどうか.<br>デフォルト値: false  | Boolean             | No       |
 | headers            | ヘッダ情報の配列                                  | Array<HeaderObject> | No       |
 | HeaderObject.label | ヘッダ表示文字列                                  | String              | No       |
 | HeaderObject.name  | items 配列の対応するキー名                        | String              | No       |
 | HeaderObject.width | 幅                                                | String              | No       |
+| height             | テーブルの高さ. ヘッダを固定する場合は必須.       | Number              | No       |
 | items              | データの配列                                      | Array<Object>       | No       |
 | visible            | テーブルを表示するかどうか.<br>デフォルト値: true | Boolean             | No       |
 

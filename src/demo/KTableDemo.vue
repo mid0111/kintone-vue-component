@@ -5,20 +5,12 @@
     <h3>slot</h3>
     <k-table :headers="slotHeaders" :items="items">
       <template v-slot:header>
-        <th :colspan="slotHeaders.length">
-          カスタムヘッダ
-        </th>
+        <th :colspan="slotHeaders.length">カスタムヘッダ</th>
       </template>
       <template v-slot:default="slotProps">
-        <td width="80">
-          {{ slotProps.item['no'] }}
-        </td>
-        <td>
-          {{ slotProps.item['name'] }}
-        </td>
-        <td>
-          {{ slotProps.item['group'] }}
-        </td>
+        <td width="80">{{ slotProps.item['no'] }}</td>
+        <td>{{ slotProps.item['name'] }}</td>
+        <td>{{ slotProps.item['group'] }}</td>
         <td width="40">
           <k-icon-button type="close" color="blue" size="small" />
         </td>
