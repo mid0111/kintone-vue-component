@@ -30,7 +30,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'large',
+      default: 'medium',
       required: false
     },
     color: {
@@ -52,7 +52,10 @@ export default {
 
   computed: {
     sizeClass() {
-      const className = this.size === 'small' ? 'small' : 'large';
+      let className = 'medium';
+      if (this.size === 'small' || this.size === 'x-small') {
+        className = this.size;
+      }
       return className;
     },
 
@@ -142,15 +145,23 @@ export default {
 .k-icon-btn.circle {
   border-radius: 50%;
 }
-.k-icon-btn.large {
+.k-icon-btn.medium {
   width: 32px;
   height: 32px;
 }
 .k-icon-btn.small {
+  width: 24px;
+  height: 24px;
+}
+.k-icon-btn.small svg {
+  transform: scale(0.75);
+  transform-origin: -4px -4px;
+}
+.k-icon-btn.x-small {
   width: 16px;
   height: 16px;
 }
-.k-icon-btn.small svg {
+.k-icon-btn.x-small svg {
   width: 24px;
   height: 24px;
   transform: scale(0.5);

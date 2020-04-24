@@ -18,9 +18,11 @@
       <k-icon-button shape="normal" type="right" color="gray" />
       <k-icon-button shape="normal" type="left" color="transparent" />
     </div>
-    <h3>small</h3>
+    <h3>size</h3>
     <div class="box">
+      <k-icon-button size="x-small" type="insert" color="blue" />
       <k-icon-button size="small" type="insert" color="blue" />
+      <k-icon-button size="medium" type="insert" color="blue" />
     </div>
   </div>
 </template>
