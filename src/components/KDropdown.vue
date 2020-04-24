@@ -1,7 +1,11 @@
 <template>
   <div class="k-dropdown-container">
     <div class="k-dropdown-sub-container">
-      <div class="k-dropdown-outer" @click="toggleShowItems">
+      <div
+        class="k-dropdown-outer"
+        @click="toggleShowItems"
+        ref="dropdownOuter"
+      >
         <div class="k-dropdown" :class="{ 'k-dropdown-disable': disabled }">
           <div class="k-dropdown-selected">
             <span class="k-dropdown-selected-name">
@@ -15,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div :style="[displayStyle]" class="k-list-outer">
+      <div :style="[displayStyle, listHeightStyle]" class="k-list-outer">
         <k-item
           v-for="(item, i) in items"
           :key="i"
@@ -59,7 +63,8 @@ export default {
   data() {
     return {
       mdiChevronDown,
-      visibleItems: false
+      visibleItems: false,
+      listHeight: 400
     };
   },
 
@@ -83,6 +88,12 @@ export default {
       return this.visibleItems && !this.disabled
         ? { display: 'block' }
         : { display: 'none' };
+    },
+
+    listHeightStyle() {
+      return {
+        'max-height': this.listHeight + 'px'
+      };
     }
   },
 
@@ -110,6 +121,10 @@ export default {
       } else {
         document.removeEventListener('click', this.close, false);
       }
+      this.listHeight =
+        document.documentElement.clientHeight -
+        this.$refs.dropdownOuter.getBoundingClientRect().bottom -
+        24;
     }
   }
 };
@@ -191,7 +206,6 @@ export default {
 .k-dropdown-sub-container .k-list-outer {
   position: absolute;
   overflow-y: auto;
-  max-height: 400px;
   min-width: 280px;
   z-index: 2000;
   padding: 8px 0;
