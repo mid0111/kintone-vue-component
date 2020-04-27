@@ -97,7 +97,7 @@ export default {
 }
 nav,
 .main-container {
-  text-align: start;
+  text-align: left;
 }
 </style>
 <style>
