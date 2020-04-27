@@ -87,7 +87,7 @@ export default {
       if (this.fixedHeader && !height) {
         height = 300;
       }
-      return { height: height + 'px' };
+      return { 'max-height': height + 'px' };
     }
   },
 
