@@ -1,7 +1,7 @@
 <template>
   <div
     class="k-table"
-    :class="{ 'k-table--fixed-header': fixedHeader }"
+    :class="{ 'k-table--fixed-header': fixedHeader, 'k-table--dense': dense }"
     :style="[heightStyle]"
   >
     <table :style="tableStyle">
@@ -70,6 +70,11 @@ export default {
       type: Number,
       default: undefined,
       required: false
+    },
+    dense: {
+      type: Boolean,
+      default: false,
+      required: false
     }
   },
 
@@ -108,6 +113,8 @@ export default {
 
 .k-table table {
   display: table;
+  background-color: #fff;
+  table-layout: fixed;
   font-size: 14px;
   width: 100%;
   border-collapse: collapse;
@@ -160,6 +167,11 @@ export default {
 .k-table td {
   vertical-align: top;
   padding: 16px 24px;
+}
+
+.k-table.k-table--dense th,
+.k-table.k-table--dense td {
+  padding: 8px 12px;
 }
 
 .k-table tbody {

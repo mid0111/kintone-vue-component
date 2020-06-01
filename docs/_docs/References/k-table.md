@@ -85,6 +85,7 @@ export default {
 
 | Name               | Description                                       | Type                | Required |
 | ------------------ | ------------------------------------------------- | ------------------- | -------- |
+| dense              | パディングを小さくする.<br>デフォルト値:false      | Boolean       | No       |
 | fixedHeader        | ヘッダを固定するかどうか.<br>デフォルト値: false  | Boolean             | No       |
 | headers            | ヘッダ情報の配列                                  | Array<HeaderObject> | No       |
 | HeaderObject.label | ヘッダ表示文字列                                  | String              | No       |
