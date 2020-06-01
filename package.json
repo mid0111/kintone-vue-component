@@ -1,6 +1,6 @@
 {
   "name": "kintone-vue-component",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "scripts": {
     "demo": "vue-cli-service serve",
     "build-demo": "vue-cli-service build --target app --dest docs/demo ./src/main.ts",
