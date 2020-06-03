@@ -141,6 +141,9 @@ export default {
   -ms-user-select: none;
   user-select: none;
 }
+.k-dropdown-container {
+  padding: 4px 0;
+}
 .k-dropdown {
   position: relative;
   display: inline-block;
