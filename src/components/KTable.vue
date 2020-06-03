@@ -26,7 +26,7 @@
           :key="`row-${rowIndex}`"
           class="k-table-tr"
         >
-          <slot v-if="getSlot('default')" :item="item"></slot>
+          <slot v-if="getSlot('default')" :item="item" :index="rowIndex"></slot>
           <td
             class="k-table-td"
             v-else
@@ -165,7 +165,7 @@ export default {
 }
 
 .k-table td {
-  vertical-align: top;
+  vertical-align: middle;
   padding: 16px 24px;
 }
 

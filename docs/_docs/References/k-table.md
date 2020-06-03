@@ -30,7 +30,12 @@ demo: k-table
         <td>{{ "{{ slotProps.item['name'] " }}}}</td>
         <td>{{ "{{ slotProps.item['group'] " }}}}</td>
         <td>
-          <k-icon-button type="close" color="blue" size="small" />
+          <k-icon-button
+            type="close"
+            color="blue"
+            size="small"
+            @click="onClick(slotProps.index)"
+          />
         </td>
       </template>
     </k-table>
@@ -76,6 +81,12 @@ export default {
         }
       ]
     };
+  },
+
+  methods: {
+    onClick(index) {
+      alert(`${this.items[index].name} is selected.`);
+    }
   }
 };
 </script>
@@ -85,7 +96,7 @@ export default {
 
 | Name               | Description                                       | Type                | Required |
 | ------------------ | ------------------------------------------------- | ------------------- | -------- |
-| dense              | パディングを小さくする.<br>デフォルト値:false      | Boolean       | No       |
+| dense              | パディングを小さくする.<br>デフォルト値:false     | Boolean             | No       |
 | fixedHeader        | ヘッダを固定するかどうか.<br>デフォルト値: false  | Boolean             | No       |
 | headers            | ヘッダ情報の配列                                  | Array<HeaderObject> | No       |
 | HeaderObject.label | ヘッダ表示文字列                                  | String              | No       |

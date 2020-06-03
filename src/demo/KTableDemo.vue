@@ -12,7 +12,12 @@
         <td>{{ slotProps.item['name'] }}</td>
         <td>{{ slotProps.item['group'] }}</td>
         <td width="40">
-          <k-icon-button type="close" color="blue" size="small" />
+          <k-icon-button
+            type="close"
+            color="blue"
+            size="small"
+            @click="onClick(slotProps.index)"
+          />
         </td>
       </template>
     </k-table>
@@ -66,6 +71,12 @@ export default {
         }
       ]
     };
+  },
+
+  methods: {
+    onClick(index) {
+      alert(`${this.items[index].name} is selected.`);
+    }
   }
 };
 </script>
