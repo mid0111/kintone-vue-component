@@ -4,17 +4,22 @@
   </button>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script>
+export default {
+  props: {
+    text: {
+      type: String,
+      default: '',
+      required: false
+    }
+  },
 
-@Component
-export default class KTextButton extends Vue {
-  @Prop({ default: '' }) text?: string;
-
-  private onClick() {
-    this.$emit('click');
+  methods: {
+    onClick() {
+      this.$emit('click');
+    }
   }
-}
+};
 </script>
 
 <style lang="css" scoped>
