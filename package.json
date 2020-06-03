@@ -7,7 +7,7 @@
     "build:type": "tsc --emitDeclarationOnly --declaration -P tsconfig.types.json",
     "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/components/index.ts",
     "build": "run-s --print-label build:lib build:type",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint src"
   },
   "main": "./dist/kintone-vue-component.common.js",
   "typings": "dist/types/index.d.ts",
@@ -45,7 +45,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
+    "src/**/*.{js,jsx,vue,ts,tsx}": [
       "vue-cli-service lint",
       "git add"
     ]
