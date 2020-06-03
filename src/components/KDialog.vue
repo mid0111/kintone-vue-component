@@ -7,7 +7,7 @@
           <k-icon-button type="close" @click="onClose" />
         </span>
       </div>
-      <div class="k-dialog-body">
+      <div class="k-dialog-body" :style="{ height: bodyHeightValue + 'px' }">
         <slot></slot>
       </div>
       <div class="k-dialog-footer">
@@ -20,6 +20,11 @@
 <script>
 import KIconButton from './KIconButton.vue';
 
+const headerHeight = 70;
+const fotterHeight = 78;
+const bodyPadding = 30;
+const margin = 25;
+
 export default {
   components: {
     KIconButton
@@ -30,18 +35,46 @@ export default {
       type: Boolean,
       default: true,
       required: false
+    },
+
+    height: {
+      type: Number,
+      default: undefined,
+      required: false
     }
   },
 
   computed: {
     hidden() {
       return this.visible === false;
+    },
+
+    bodyHeightValue() {
+      return this.height
+        ? this.height - (headerHeight + fotterHeight)
+        : this.calcBodyHeight;
     }
+  },
+
+  data() {
+    return {
+      calcBodyHeight: 200
+    };
   },
 
   methods: {
     onClose() {
       this.$emit('close');
+    }
+  },
+
+  watch: {
+    visible(current) {
+      if (current) {
+        this.calcBodyHeight =
+          document.documentElement.clientHeight -
+          (headerHeight + fotterHeight + bodyPadding + margin);
+      }
     }
   }
 };
