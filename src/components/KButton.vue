@@ -2,7 +2,7 @@
   <button
     @click.stop="onClick"
     class="k-btn"
-    :class="[typeClass]"
+    :class="[typeClass, denseClass]"
     :disabled="disabled"
   >
     {{ text }}
@@ -26,12 +26,20 @@ export default {
       type: Boolean,
       default: false,
       required: false
+    },
+    dense: {
+      type: Boolean,
+      default: false,
+      required: false
     }
   },
 
   computed: {
     typeClass() {
       return this.type === 'submit' ? 'submit' : 'normal';
+    },
+    denseClass() {
+      return this.dense ? 'dense' : undefined;
     }
   },
   methods: {
@@ -43,14 +51,23 @@ export default {
 </script>
 
 <style scoped>
-.k-btn.normal,
-.k-btn.submit {
+.k-btn {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   font-size: 16px;
   white-space: nowrap;
+  padding: 0 16px;
+  min-width: 163px;
+  height: 48px;
+  line-height: 48px;
+}
+.k-btn.dense {
+  padding: 0 8px;
+  min-width: 80px;
+  height: 36px;
+  line-height: 36px;
 }
 .k-btn.normal:disabled,
 .k-btn.submit:disabled,
@@ -65,16 +82,12 @@ export default {
 .k-btn.normal {
   display: block;
   box-sizing: border-box;
-  padding: 0 16px;
-  min-width: 163px;
-  height: 48px;
   outline: none;
   border: 1px solid #e3e7e8;
   background-color: #f7f9fa;
   box-shadow: 1px 1px 1px #fff inset;
   color: #3498db;
   text-align: center;
-  line-height: 48px;
 }
 .k-btn.normal:hover {
   background-color: #c8d6dd;
@@ -85,16 +98,12 @@ export default {
 .k-btn.submit {
   display: block;
   box-sizing: border-box;
-  padding: 0 16px;
-  min-width: 163px;
-  height: 48px;
   outline: none;
   border: 1px solid #e3e7e8;
   background-color: #3498db;
   box-shadow: 1px 1px 1px #8ccbee inset;
   color: #fff;
   text-align: center;
-  line-height: 48px;
 }
 .k-btn.submit:hover {
   background-color: #1d6fa5;

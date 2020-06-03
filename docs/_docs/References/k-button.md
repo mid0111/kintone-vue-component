@@ -32,6 +32,7 @@ export default {
 
 | Name     | Description                                                        | Type    | Required |
 | -------- | ------------------------------------------------------------------ | ------- | -------- |
+| dense    | パディングを小さくする.<br>デフォルト値:false                      | Boolean | No       |
 | disabled | disabled にするかどうか.<br>デフォルト値: 'false'                  | Boolean | No       |
 | text     | ボタンの名前.<br>デフォルト値: ''                                  | String  | Yes      |
 | type     | ボタンのタイプ.<br>・normal<br>・submit <br>デフォルト値: 'normal' | String  | No       |

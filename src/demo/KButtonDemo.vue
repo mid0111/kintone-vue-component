@@ -12,6 +12,8 @@
     </div>
     <h3>disabled</h3>
     <k-button text="保存" type="submit" disabled />
+    <h3>dense</h3>
+    <k-button text="選択" dense />
   </div>
 </template>
 
