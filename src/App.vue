@@ -7,6 +7,9 @@
       <component-title title="k-button" />
       <k-button-demo />
 
+      <component-title title="k-checkbox" />
+      <k-checkbox-demo />
+
       <component-title title="k-dialog" />
       <k-dialog-demo />
 
@@ -38,6 +41,7 @@
 import Navigation from './demo/Navigation.vue';
 import ComponentTitle from './demo/ComponentTitle.vue';
 import KButtonDemo from './demo/KButtonDemo.vue';
+import KCheckboxDemo from './demo/KCheckboxDemo.vue';
 import KDialogDemo from './demo/KDialogDemo.vue';
 import KDropdownDemo from './demo/KDropdownDemo.vue';
 import KIconButtonDemo from './demo/KIconButtonDemo.vue';
@@ -53,6 +57,7 @@ export default {
     Navigation,
     ComponentTitle,
     KButtonDemo,
+    KCheckboxDemo,
     KDialogDemo,
     KDropdownDemo,
     KIconButtonDemo,
@@ -67,6 +72,7 @@ export default {
     return {
       components: [
         'k-button',
+        'k-checkbox',
         'k-dialog',
         'k-dropdown',
         'k-icon-button',
