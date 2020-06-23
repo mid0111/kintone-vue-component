@@ -8,6 +8,7 @@
       <k-icon-button type="file" color="green" />
       <k-icon-button type="right" color="gray" />
       <k-icon-button type="left" color="transparent" />
+      <k-icon-button type="mdiMagnify" />
     </div>
     <h3>square</h3>
     <div class="box">
@@ -17,6 +18,7 @@
       <k-icon-button shape="normal" type="file" color="green" />
       <k-icon-button shape="normal" type="right" color="gray" />
       <k-icon-button shape="normal" type="left" color="transparent" />
+      <k-icon-button shape="normal" type="mdiMagnify" />
     </div>
     <h3>size</h3>
     <div class="box">

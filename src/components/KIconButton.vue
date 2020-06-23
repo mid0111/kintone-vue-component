@@ -12,14 +12,7 @@
 </template>
 
 <script>
-import {
-  mdiPlus,
-  mdiMinus,
-  mdiClose,
-  mdiFile,
-  mdiChevronRight,
-  mdiChevronLeft
-} from '@mdi/js';
+import * as mdi from '@mdi/js';
 
 export default {
   props: {
@@ -78,24 +71,27 @@ export default {
     },
 
     iconData() {
-      let iconData = mdiPlus;
+      let iconData = mdi.mdiPlus;
       switch (this.type) {
         case 'insert':
           break;
         case 'remove':
-          iconData = mdiMinus;
+          iconData = mdi.mdiMinus;
           break;
         case 'close':
-          iconData = mdiClose;
+          iconData = mdi.mdiClose;
           break;
         case 'file':
-          iconData = mdiFile;
+          iconData = mdi.mdiFile;
           break;
         case 'right':
-          iconData = mdiChevronRight;
+          iconData = mdi.mdiChevronRight;
           break;
         case 'left':
-          iconData = mdiChevronLeft;
+          iconData = mdi.mdiChevronLeft;
+          break;
+        default:
+          iconData = mdi[this.type];
           break;
       }
       return iconData;
