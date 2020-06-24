@@ -670,6 +670,13 @@ module.exports = {
 
 /***/ }),
 
+/***/ "4ff9":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "50c4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1891,6 +1898,17 @@ var store = global[SHARED] || setGlobal(SHARED, {});
 
 module.exports = store;
 
+
+/***/ }),
+
+/***/ "c790":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KRadioButton_vue_vue_type_style_index_0_id_aa9ce256_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("4ff9");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KRadioButton_vue_vue_type_style_index_0_id_aa9ce256_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KRadioButton_vue_vue_type_style_index_0_id_aa9ce256_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KRadioButton_vue_vue_type_style_index_0_id_aa9ce256_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -13462,6 +13480,102 @@ var KLabel_component = normalizeComponent(
 )
 
 /* harmony default export */ var KLabel = (KLabel_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"64fa0244-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KRadioButton.vue?vue&type=template&id=aa9ce256&scoped=true&
+var KRadioButtonvue_type_template_id_aa9ce256_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"kuc-input-radio"},_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"kuc-input-radio-item"},[_c('input',{attrs:{"name":item.name,"id":_vm.id(index),"disabled":_vm.disabled === true ? _vm.disabled : item.disabled,"type":"radio"},domProps:{"checked":_vm.isSelected(item)},on:{"input":function($event){return _vm.onChange(item)}}}),_c('label',{attrs:{"for":_vm.id(index)}},[_vm._v(_vm._s(item.label || '')+" ")])])}),0)}
+var KRadioButtonvue_type_template_id_aa9ce256_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/KRadioButton.vue?vue&type=template&id=aa9ce256&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KRadioButton.vue?vue&type=script&lang=js&
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var KRadioButtonvue_type_script_lang_js_ = ({
+  props: {
+    items: {
+      type: Array,
+      default: function _default() {
+        return [];
+      },
+      required: true
+    },
+    value: {
+      type: String,
+      default: null,
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      required: false
+    }
+  },
+  data: function data() {
+    return {
+      idPrefix: new Date().getTime() + '-' + this.generateGUID() + '-' + this.generateGUID() + this.generateGUID()
+    };
+  },
+  methods: {
+    generateGUID: function generateGUID() {
+      return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    },
+    isSelected: function isSelected(item) {
+      return this.value === item.value;
+    },
+    id: function id(index) {
+      return this.idPrefix + index;
+    },
+    onChange: function onChange(item) {
+      this.$emit('input', item.value || '');
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/KRadioButton.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_KRadioButtonvue_type_script_lang_js_ = (KRadioButtonvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/KRadioButton.vue?vue&type=style&index=0&id=aa9ce256&scoped=true&lang=css&
+var KRadioButtonvue_type_style_index_0_id_aa9ce256_scoped_true_lang_css_ = __webpack_require__("c790");
+
+// CONCATENATED MODULE: ./src/components/KRadioButton.vue
+
+
+
+
+
+
+/* normalize component */
+
+var KRadioButton_component = normalizeComponent(
+  components_KRadioButtonvue_type_script_lang_js_,
+  KRadioButtonvue_type_template_id_aa9ce256_scoped_true_render,
+  KRadioButtonvue_type_template_id_aa9ce256_scoped_true_staticRenderFns,
+  false,
+  null,
+  "aa9ce256",
+  null
+  
+)
+
+/* harmony default export */ var KRadioButton = (KRadioButton_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"64fa0244-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KSpinner.vue?vue&type=template&id=58def2d1&scoped=true&
 var KSpinnervue_type_template_id_58def2d1_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.visible)?_c('div',{staticClass:"k-spinner-outer"},[_c('div',{staticClass:"k-spinner"},[_c('div',{staticClass:"k-loader",class:[_vm.loadingClass]})])]):_vm._e()}
 var KSpinnervue_type_template_id_58def2d1_scoped_true_staticRenderFns = []
@@ -13828,6 +13942,7 @@ var KTextButton_component = normalizeComponent(
 
 
 
+
 var components = {
   KButton: KButton,
   KCheckbox: KCheckbox,
@@ -13836,6 +13951,7 @@ var components = {
   KIconButton: KIconButton,
   KItem: KItem,
   KLabel: KLabel,
+  KRadioButton: KRadioButton,
   KSpinner: KSpinner,
   KTable: KTable,
   KText: KText,
