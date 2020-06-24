@@ -2,17 +2,17 @@
   <div class="components">
     <h3>basic</h3>
     <div class="clearfix">
-      <k-checkbox :items="items" v-model="value" />
+      <k-radio-button :items="items" v-model="value" />
     </div>
   </div>
 </template>
 
 <script>
-import KCheckbox from '../components/KCheckbox.vue';
+import KRadioButton from '../components/KRadioButton.vue';
 
 export default {
   components: {
-    KCheckbox
+    KRadioButton
   },
 
   data() {
@@ -34,7 +34,7 @@ export default {
           disabled: false
         }
       ],
-      value: ['Orange', 'Banana']
+      value: 'Lemon'
     };
   }
 };

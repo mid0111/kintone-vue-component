@@ -1,21 +1,21 @@
 ---
-title: k-checkbox
+title: k-radio-button
 category: References
 order: 1
-demo: k-checkbox
+demo: k-radio-button
 ---
 
-> `k-checkbox` コンポーネントはチェックボックスとして使用されます。
+> `k-radio-button` コンポーネントはラジオボタンとして使用されます。
 
 ## デモ
 
-![]({{ "/images/k-checkbox-basic.png" | relative_url }})
+![]({{ "/images/k-radio-button-basic.png" | relative_url }})
 
 ## 使い方
 
 ```vue
 <template>
-  <k-checkbox :items="items" v-model="value" />
+  <k-radio-button :items="items" v-model="value" />
 </template>
 
 <script>
@@ -39,7 +39,7 @@ export default {
           disabled: false
         }
       ],
-      value: ['Orange', 'Banana']
+      value: 'Lemon'
     };
   }
 };
@@ -53,7 +53,7 @@ export default {
 | items[x].value | item を識別するための値                                      | String | No       |
 | items[x].label | item のラベル                                                | String | No       |
 | items[x].disabled | item を無効にするかどうか<br>デフォルト値: false           | Boolean | No       |
-| value     | チェックされた item の配列                                         | Array  | No      |
+| value     | チェックされた item の値                                         | String  | No      |
 | disabled     | チェックボックスすべてを無効にするかどうか<br>デフォルト値: false | Boolean  | No       |
 
 ## Event

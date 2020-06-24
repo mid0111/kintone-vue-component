@@ -22,6 +22,9 @@
       <component-title title="k-label" />
       <k-label-demo />
 
+      <component-title title="k-radio-button" />
+      <k-radio-button-demo />
+
       <component-title title="k-spinner" />
       <k-spinner-demo />
 
@@ -46,6 +49,7 @@ import KDialogDemo from './demo/KDialogDemo.vue';
 import KDropdownDemo from './demo/KDropdownDemo.vue';
 import KIconButtonDemo from './demo/KIconButtonDemo.vue';
 import KLabelDemo from './demo/KLabelDemo.vue';
+import KRadioButtonDemo from './demo/KRadioButtonDemo.vue';
 import KSpinnerDemo from './demo/KSpinnerDemo.vue';
 import KTableDemo from './demo/KTableDemo.vue';
 import KTextDemo from './demo/KTextDemo.vue';
@@ -62,6 +66,7 @@ export default {
     KDropdownDemo,
     KIconButtonDemo,
     KLabelDemo,
+    KRadioButtonDemo,
     KSpinnerDemo,
     KTableDemo,
     KTextButtonDemo,
@@ -77,6 +82,7 @@ export default {
         'k-dropdown',
         'k-icon-button',
         'k-label',
+        'k-radio-button',
         'k-spinner',
         'k-table',
         'k-text-button',
