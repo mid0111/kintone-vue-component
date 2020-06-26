@@ -1,0 +1,165 @@
+:lang(en) *[class|='k-'] {
+  font-family: 'HelveticaNeueW02-45Ligh', Arial, 'Hiragino Kaku Gothic ProN',
+    Meiryo, sans-serif;
+}
+
+:lang(en) *[class|='k-'] .label {
+  font-family: HelveticaNeueW02-55Roma, Arial, 'Hiragino Kaku Gothic ProN',
+    Meiryo, sans-serif;
+}
+
+:lang(ja) *[class|='k-'] {
+  font-family: 'メイリオ', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+:lang(ja) *[class|='k-'] .label {
+  font-family: 'メイリオ', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+:lang(zh) *[class|='k-'] {
+  font-family: '微软雅黑', 'Microsoft YaHei', '新宋体', NSimSun, STHeiti, Hei,
+    'Heiti SC', sans-serif;
+}
+
+:lang(zh) *[class|='k-'] .label {
+  font-family: '微软雅黑', 'Microsoft YaHei', '新宋体', NSimSun, STHeiti, Hei,
+    'Heiti SC', sans-serif;
+}
+
+.k-arrow {
+  color: #727272;
+  position: relative;
+  margin: 10px 8px 0 0;
+}
+
+.k-arrow::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+
+.k-arrow.right:before {
+  top: 4px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.k-arrow.down:before {
+  top: 2px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+/* Utility */
+.d-inline-block {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+@for $i from 0 through 10 {
+  .ma-#{$i} {
+    margin: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .ml-#{$i} {
+    margin-left: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .mr-#{$i} {
+    margin-right: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .mt-#{$i} {
+    margin-top: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .mb-#{$i} {
+    margin-bottom: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .mx-#{$i} {
+    margin-left: $i * 2px;
+    margin-right: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .my-#{$i} {
+    margin-top: $i * 2px;
+    margin-right: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pa-#{$i} {
+    padding: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pl-#{$i} {
+    padding-left: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pr-#{$i} {
+    padding-right: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pt-#{$i} {
+    padding-top: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pb-#{$i} {
+    padding-bottom: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .px-#{$i} {
+    padding-left: $i * 2px;
+    padding-right: $i * 2px;
+  }
+}
+
+@for $i from 0 through 10 {
+  .py-#{$i} {
+    padding-top: $i * 2px;
+    padding-bottom: $i * 2px;
+  }
+}
