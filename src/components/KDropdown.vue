@@ -107,6 +107,7 @@ export default {
     },
 
     onClickItem(value) {
+      this.$emit('change', value);
       this.$emit('input', value);
       this.visibleItems = false;
     }

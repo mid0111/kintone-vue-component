@@ -1,6 +1,7 @@
 import { Vue as _Vue } from 'vue-property-decorator';
 import KButton from './KButton.vue';
 import KCheckbox from './KCheckbox.vue';
+import KDatePicker from './DateTime/KDatePicker.vue';
 import KDialog from './KDialog.vue';
 import KDropdown from './KDropdown.vue';
 import KIconButton from './KIconButton.vue';
@@ -18,6 +19,7 @@ interface Components {
 const components: Components = {
   KButton,
   KCheckbox,
+  KDatePicker,
   KDialog,
   KDropdown,
   KIconButton,

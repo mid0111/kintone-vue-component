@@ -1,9 +1,9 @@
 <template>
-  <div class="kuc-input-radio">
+  <div class="k-input-radio">
     <span
       v-for="(item, index) in items"
       :key="index"
-      class="kuc-input-radio-item"
+      class="k-input-radio-item"
     >
       <input
         :name="item.name"
@@ -67,13 +67,14 @@ export default {
 
     onChange(item) {
       this.$emit('input', item.value || '');
+      this.$emit('change', item.value || '');
     }
   }
 };
 </script>
 
 <style scoped>
-.kuc-input-radio-item {
+.k-input-radio-item {
   display: block;
   margin-right: 16px;
   margin-bottom: 8px;
@@ -81,25 +82,25 @@ export default {
   max-width: 98%;
   font-size: 14px;
 }
-.kuc-input-radio-item:hover + label {
+.k-input-radio-item:hover + label {
   color: #666;
 }
-.kuc-input-radio-item input[type='radio'] {
+.k-input-radio-item input[type='radio'] {
   display: none;
   cursor: pointer;
 }
-.kuc-input-radio-item input[type='radio'] + label {
+.k-input-radio-item input[type='radio'] + label {
   position: relative;
   display: inline-block;
   margin-left: 32px;
   vertical-align: middle;
   cursor: pointer;
 }
-.kuc-input-radio-item input[type='radio'][disabled] + label {
+.k-input-radio-item input[type='radio'][disabled] + label {
   color: #bababa;
   cursor: not-allowed;
 }
-.kuc-input-radio-item input[type='radio'] + label:before {
+.k-input-radio-item input[type='radio'] + label:before {
   position: absolute;
   top: 50%;
   left: -30px;
@@ -114,7 +115,7 @@ export default {
   content: '';
   font-size: 14px;
 }
-.kuc-input-radio-item input[type='radio']:checked + label:after {
+.k-input-radio-item input[type='radio']:checked + label:after {
   position: absolute;
   top: 50%;
   left: -26px;

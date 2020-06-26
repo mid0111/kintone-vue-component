@@ -1,9 +1,9 @@
 <template>
-  <div class="kuc-input-checkbox">
+  <div class="k-input-checkbox">
     <span
       v-for="(item, index) in items"
       :key="index"
-      class="kuc-input-checkbox-item"
+      class="k-input-checkbox-item"
     >
       <input
         :name="item.name"
@@ -83,33 +83,34 @@ export default {
         value.push(itemValue);
       }
       this.$emit('input', value);
+      this.$emit('change', value);
     }
   }
 };
 </script>
 
 <style scoped>
-.kuc-input-checkbox-item {
+.k-input-checkbox-item {
   display: block;
   margin-right: 16px;
   margin-bottom: 8px;
   padding-left: 1px;
   max-width: 98%;
 }
-.kuc-input-checkbox-item-block {
+.k-input-checkbox-item-block {
   display: block;
 }
-.kuc-input-checkbox-item-inline {
+.k-input-checkbox-item-inline {
   display: inline-block;
 }
-.kuc-input-checkbox-item:hover + label {
+.k-input-checkbox-item:hover + label {
   color: #666;
 }
-.kuc-input-checkbox-item input[type='checkbox'] {
+.k-input-checkbox-item input[type='checkbox'] {
   display: none;
   cursor: pointer;
 }
-.kuc-input-checkbox-item input[type='checkbox'] + label {
+.k-input-checkbox-item input[type='checkbox'] + label {
   position: relative;
   display: inline-block;
   margin-left: 32px;
@@ -117,11 +118,11 @@ export default {
   font-size: 14px;
   cursor: pointer;
 }
-.kuc-input-checkbox-item input[type='checkbox'][disabled] + label {
+.k-input-checkbox-item input[type='checkbox'][disabled] + label {
   color: #bababa;
   cursor: not-allowed;
 }
-.kuc-input-checkbox-item input[type='checkbox'] + label:before {
+.k-input-checkbox-item input[type='checkbox'] + label:before {
   position: absolute;
   top: 50%;
   left: -30px;
@@ -135,7 +136,7 @@ export default {
     no-repeat center center #fff;
   content: '';
 }
-.kuc-input-checkbox-item input[type='checkbox']:checked + label:after {
+.k-input-checkbox-item input[type='checkbox']:checked + label:after {
   position: absolute;
   top: 50%;
   left: -30px;
@@ -147,12 +148,10 @@ export default {
     no-repeat center center #fff;
   content: '';
 }
-.kuc-input-checkbox-item
-  input[type='checkbox'][disabled]:checked
-  + label:after {
+.k-input-checkbox-item input[type='checkbox'][disabled]:checked + label:after {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5N0VENzg3MEJBQzExRTQ5MUVFOTIwNzZCRTVEQkEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ5N0VENzg4MEJBQzExRTQ5MUVFOTIwNzZCRTVEQkEwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDk3RUQ3ODUwQkFDMTFFNDkxRUU5MjA3NkJFNURCQTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDk3RUQ3ODYwQkFDMTFFNDkxRUU5MjA3NkJFNURCQTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4bu7OxAAABBUlEQVR42mK8fPXacwYGBh4G6oEvLECCH4gvAvEbKhgoAsT6IEP/Qg30pYKhm0HmMTHQAAw6Q+WAmI2ahmoB8XQgzsOWcsgxVAWIe4HYC4i7gdiOWEO5gFgHi7gaEE8FYg8ofw0QPyHGUCEgrgbimUBshSSuATXQDcnAfCC+hG4ACxZDQd6pgrI7oRq/AXE/ELsgGVgIxM+weROboVeAeA4QpwCxDRCfRZOHGfgEV6BjM/QOEJdC2SlocuugLn9GTjr9AMTlUBcjG5hLyEBcLoWBd1CDQSlBgFgDCRkKMxgUfhzEGkiMoSDwasgXKHi9zwwtsTdTqeRnBhn6EUc+Jxd8BAgwAIGUL+JG+jF3AAAAAElFTkSuQmCC);
 }
-.kuc-input-radio-item input[type='checkbox'][disabled] + label {
+.k-input-radio-item input[type='checkbox'][disabled] + label {
   color: #bababa;
   cursor: not-allowed;
 }

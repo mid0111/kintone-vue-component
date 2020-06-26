@@ -47,17 +47,18 @@ export default {
 
 ## Attribute
 
-| Name     | Description                                                        | Type    | Required |
-| -------- | ------------------------------------------------------------------ | ------- | -------- |
-| items    | チェックボックスに表示する項目                                      | Array&lt;Object&gt; | Yes       |
-| items[x].value | item を識別するための値                                      | String | No       |
-| items[x].label | item のラベル                                                | String | No       |
-| items[x].disabled | item を無効にするかどうか<br>デフォルト値: false           | Boolean | No       |
-| value     | チェックされた item の値                                         | String  | No      |
-| disabled     | チェックボックスすべてを無効にするかどうか<br>デフォルト値: false | Boolean  | No       |
+| Name              | Description                                                   | Type                | Required |
+| ----------------- | ------------------------------------------------------------- | ------------------- | -------- |
+| items             | ラジオボタンに表示する項目                                    | Array&lt;Object&gt; | Yes      |
+| items[x].value    | item を識別するための値                                       | String              | No       |
+| items[x].label    | item のラベル                                                 | String              | No       |
+| items[x].disabled | item を無効にするかどうか<br>デフォルト値: false              | Boolean             | No       |
+| value             | チェックされた item の値                                      | String              | No       |
+| disabled          | ラジオボタンすべてを無効にするかどうか<br>デフォルト値: false | Boolean             | No       |
 
 ## Event
 
-| Name  | Description                                            |
-| ----- | ------------------------------------------------------ |
-| input | チェックボックスをクリックしたときに発生する |
+| Name   | Description                              |
+| ------ | ---------------------------------------- |
+| input  | ラジオボタンをクリックしたときに発生する |
+| change | ラジオボタンをクリックしたときに発生する |

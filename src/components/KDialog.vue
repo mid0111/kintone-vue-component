@@ -120,7 +120,7 @@ export default {
 .k-dialog-footer {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 15px 20px;
   max-width: 90vw;
 }
