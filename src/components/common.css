@@ -1,0 +1,55 @@
+:lang(en) *[class|='k-'] {
+  font-family: 'HelveticaNeueW02-45Ligh', Arial, 'Hiragino Kaku Gothic ProN',
+    Meiryo, sans-serif;
+}
+
+:lang(en) *[class|='k-'] .label {
+  font-family: HelveticaNeueW02-55Roma, Arial, 'Hiragino Kaku Gothic ProN',
+    Meiryo, sans-serif;
+}
+
+:lang(ja) *[class|='k-'] {
+  font-family: 'メイリオ', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+:lang(ja) *[class|='k-'] .label {
+  font-family: 'メイリオ', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+:lang(zh) *[class|='k-'] {
+  font-family: '微软雅黑', 'Microsoft YaHei', '新宋体', NSimSun, STHeiti, Hei,
+    'Heiti SC', sans-serif;
+}
+
+:lang(zh) *[class|='k-'] .label {
+  font-family: '微软雅黑', 'Microsoft YaHei', '新宋体', NSimSun, STHeiti, Hei,
+    'Heiti SC', sans-serif;
+}
+
+.k-arrow {
+  color: #727272;
+  position: relative;
+  margin: 10px 8px 0 0;
+}
+
+.k-arrow::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+}
+
+.k-arrow.right:before {
+  top: 4px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.k-arrow.down:before {
+  top: 2px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}

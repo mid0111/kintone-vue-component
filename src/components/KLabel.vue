@@ -47,7 +47,7 @@ export default {
   padding: 4px 8px;
   color: #333;
   font-size: 14px;
-  margin: 0 -8px;
+  margin: 0;
   white-space: nowrap;
 }
 .k-label .k-require {

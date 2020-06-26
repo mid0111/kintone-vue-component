@@ -52,7 +52,7 @@ export default {
 
 <style lang="css" scoped>
 .k-input-outer {
-  padding: 4px 0;
+  padding: 4px 8px;
 }
 .k-input-text {
   display: block;

@@ -19,6 +19,9 @@
       <component-title title="k-dropdown" />
       <k-dropdown-demo />
 
+      <component-title title="k-field-group" />
+      <k-field-group-demo />
+
       <component-title title="k-icon-button" />
       <k-icon-button-demo />
 
@@ -44,6 +47,8 @@
 </template>
 
 <script>
+import './components';
+
 import Navigation from './demo/Navigation.vue';
 import ComponentTitle from './demo/ComponentTitle.vue';
 import KButtonDemo from './demo/KButtonDemo.vue';
@@ -51,6 +56,7 @@ import KCheckboxDemo from './demo/KCheckboxDemo.vue';
 import KDatePickerDemo from './demo/KDatePickerDemo.vue';
 import KDialogDemo from './demo/KDialogDemo.vue';
 import KDropdownDemo from './demo/KDropdownDemo.vue';
+import KFieldGroupDemo from './demo/KFieldGroupDemo.vue';
 import KIconButtonDemo from './demo/KIconButtonDemo.vue';
 import KLabelDemo from './demo/KLabelDemo.vue';
 import KRadioButtonDemo from './demo/KRadioButtonDemo.vue';
@@ -69,6 +75,7 @@ export default {
     KDatePickerDemo,
     KDialogDemo,
     KDropdownDemo,
+    KFieldGroupDemo,
     KIconButtonDemo,
     KLabelDemo,
     KRadioButtonDemo,
@@ -86,6 +93,7 @@ export default {
         'k-date-picker',
         'k-dialog',
         'k-dropdown',
+        'k-field-group',
         'k-icon-button',
         'k-label',
         'k-radio-button',
