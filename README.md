@@ -18,3 +18,24 @@ Vue.use(KintoneVueComponent);
 ## ドキュメント
 
 https://mid0111.github.io/kintone-vue-component/
+
+## 開発
+
+### ビルド
+
+```bash
+npm run build
+```
+
+### デモ起動
+
+```bash
+npm run demo
+```
+
+### ドキュメントサーバ起動
+
+```bash
+cd docs
+bundle exec jekyll serve
+```
