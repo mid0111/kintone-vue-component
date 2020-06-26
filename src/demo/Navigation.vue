@@ -8,13 +8,12 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component
-export default class KButton extends Vue {
-  @Prop() private components!: Array<string>;
-}
+<script>
+export default {
+  props: {
+    components: Array
+  }
+};
 </script>
 
 <style lang="css">

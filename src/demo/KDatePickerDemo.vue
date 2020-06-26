@@ -25,7 +25,7 @@ export default {
 
   methods: {
     onChangeDate(value) {
-      console.log(`Date change !! [${value}]`);
+      alert(`Date change !! [${value}]`);
     }
   }
 };

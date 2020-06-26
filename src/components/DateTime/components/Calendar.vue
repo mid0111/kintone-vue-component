@@ -5,7 +5,7 @@
     class="date-picker-container"
     :style="{ display: pickerDisplay }"
     @blur="onBlur"
-    tabIndex="-1"
+    tabindex="-1"
   >
     <div class="header">
       <div class="month-year-container">
@@ -56,9 +56,8 @@
           class="wday-header"
           :class="{ 'grayed-out': isWeekend(index) }"
           :key="`wday-header-${index}`"
+          >{{ label }}</span
         >
-          {{ label }}
-        </span>
         <span
           v-for="(day, index) in displayingDays"
           role="button"
@@ -71,28 +70,27 @@
           :key="`day-${index}`"
           @click="onClickDay(day)"
           @keyup="onClickDay(day)"
-          tabIndex="0"
+          tabindex="0"
+          >{{ format(day, 'd') }}</span
         >
-          {{ format(day, 'd') }}
-        </span>
       </div>
       <div class="quick-selections-container">
         <span
           role="button"
-          tabIndex="0"
+          tabindex="0"
           class="today calendar-button-control"
           @click="onClickToday"
           @keyup="onClickToday"
-          >{{ locale.today }}
-        </span>
+          >{{ locale.today }}</span
+        >
         <span
           role="button"
           class="none calendar-button-control"
           @click="onClickClear"
           @keyup="onClickClear"
-          tabIndex="0"
-          >{{ locale.none }}
-        </span>
+          tabindex="0"
+          >{{ locale.none }}</span
+        >
       </div>
     </div>
   </div>
@@ -109,12 +107,11 @@ import {
   getYearLabels
 } from './utils';
 import { en, format } from './Locale';
-import Locale from './localizationData/locale-dto';
 
 export default {
   props: {
     date: Date,
-    locale: Locale,
+    locale: Object,
     pickerDisplay: String,
     hasSelection: Boolean
   },

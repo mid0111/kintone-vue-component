@@ -9,19 +9,21 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { upperFirst, camelCase } from 'lodash';
-import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
-export default class KButton extends Vue {
-  @Prop() private title!: string;
+export default {
+  props: {
+    title: String
+  },
 
-  get sourceLink(): string {
-    const pascalCaseTitle = upperFirst(camelCase(this.title));
-    return `https://github.com/mid0111/kintone-vue-component/blob/master/src/demo/${pascalCaseTitle}Demo.vue`;
+  computed: {
+    sourceLink() {
+      const pascalCaseTitle = upperFirst(camelCase(this.title));
+      return `https://github.com/mid0111/kintone-vue-component/blob/master/src/demo/${pascalCaseTitle}Demo.vue`;
+    }
   }
-}
+};
 </script>
 
 <style>

@@ -1,4 +1,3 @@
-import { Vue as _Vue } from 'vue-property-decorator';
 import KButton from './KButton.vue';
 import KCheckbox from './KCheckbox.vue';
 import KDatePicker from './DateTime/KDatePicker.vue';
@@ -14,12 +13,9 @@ import KTable from './KTable.vue';
 import KText from './KText.vue';
 import KTextButton from './KTextButton.vue';
 
-import './common.css';
+import './common.scss';
 
-interface Components {
-  [key: string]: Record<string, any>;
-}
-const components: Components = {
+const components = {
   KButton,
   KCheckbox,
   KDatePicker,
@@ -37,8 +33,8 @@ const components: Components = {
 };
 
 export default {
-  install(Vue: typeof _Vue): void {
-    Object.keys(components).forEach(name => {
+  install(Vue) {
+    Object.keys(components).forEach((name) => {
       Vue.component(name, components[name]);
     });
   }

@@ -4,35 +4,36 @@
     <k-dropdown :items="items" v-model="selectedValue"></k-dropdown>
   </div>
 </template>
-
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+<script>
 import KDropdown from '../components/KDropdown.vue';
 
-@Component({
+export default {
   components: {
     KDropdown
+  },
+
+  data() {
+    return {
+      items: [
+        {
+          label: '---',
+          value: null
+        },
+        {
+          label: 'アイテム1',
+          value: 'アイテム1'
+        },
+        {
+          label: 'アイテム2',
+          value: 'アイテム2'
+        },
+        {
+          label: 'アイテム3',
+          value: 'アイテム3'
+        }
+      ],
+      selectedValue: null
+    };
   }
-})
-export default class KDropdownDemo extends Vue {
-  items: Array<object> = [
-    {
-      label: '---',
-      value: null
-    },
-    {
-      label: 'アイテム1',
-      value: 'アイテム1'
-    },
-    {
-      label: 'アイテム2',
-      value: 'アイテム2'
-    },
-    {
-      label: 'アイテム3',
-      value: 'アイテム3'
-    }
-  ];
-  selectedValue = null;
-}
+};
 </script>

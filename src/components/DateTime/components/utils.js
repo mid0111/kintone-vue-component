@@ -1,6 +1,6 @@
 import { format, en, getSeperator } from './Locale';
 
-const getWeekDays = (date: Date) => {
+const getWeekDays = (date) => {
   const startDate = new Date(date);
   startDate.setDate(startDate.getDate() - startDate.getDay());
   const result = [startDate];
@@ -12,20 +12,20 @@ const getWeekDays = (date: Date) => {
   return result;
 };
 
-const getWeekDayLabels = (locale: any) => {
+const getWeekDayLabels = (locale) => {
   const date = new Date();
   const eachDayOfWeek = getWeekDays(date);
-  const labels = eachDayOfWeek.map(day => {
+  const labels = eachDayOfWeek.map((day) => {
     return format(day, 'E', { locale: locale });
   });
 
   return labels;
 };
 
-const getMonthLabels = (locale: any) => {
+const getMonthLabels = (locale) => {
   const monthNames = locale.monthNames;
-  const labels: any = [];
-  monthNames.forEach((month: any) => {
+  const labels = [];
+  monthNames.forEach((month) => {
     const label = {
       label: month,
       value: month
@@ -35,11 +35,11 @@ const getMonthLabels = (locale: any) => {
   return labels;
 };
 
-const getYearLabels = (value: any, locale: any) => {
-  let currentYear: any = value.replace('年', '');
+const getYearLabels = (value, locale) => {
+  let currentYear = value.replace('年', '');
   currentYear = parseInt(value, 10);
-  const years: any = [];
-  let prefix: any = '';
+  const years = [];
+  let prefix = '';
   if (locale !== en) {
     prefix = '年';
   }
@@ -53,7 +53,7 @@ const getYearLabels = (value: any, locale: any) => {
   return years;
 };
 
-const getDisplayingDays = (date: Date) => {
+const getDisplayingDays = (date) => {
   const startDayOfMonth = new Date(date);
   startDayOfMonth.setDate(1);
   const endDayOfMonth = new Date(date);
@@ -78,13 +78,11 @@ const getDisplayingDays = (date: Date) => {
   return days;
 };
 
-const isSameMonth = (day1: Date, day2: Date) =>
-  day1.getMonth() === day2.getMonth();
-const isToday = (day: Date) => day.toDateString() === new Date().toDateString();
-const isSameDate = (day1: Date, day2: Date) =>
-  day1.toDateString() === day2.toDateString();
+const isSameMonth = (day1, day2) => day1.getMonth() === day2.getMonth();
+const isToday = (day) => day.toDateString() === new Date().toDateString();
+const isSameDate = (day1, day2) => day1.toDateString() === day2.toDateString();
 
-const parseStringToDate = (dateString: string, dateFormat?: string) => {
+const parseStringToDate = (dateString, dateFormat) => {
   try {
     const formatLowerCase = dateFormat
       ? dateFormat.toLowerCase()
@@ -116,7 +114,7 @@ const parseStringToDate = (dateString: string, dateFormat?: string) => {
   }
 };
 
-const parseStringToTime = (timeString: string) => {
+const parseStringToTime = (timeString) => {
   const timeData = {
     hour: parseInt(timeString.split(':')[0], 10),
     minute: parseInt(timeString.split(':')[1], 10)

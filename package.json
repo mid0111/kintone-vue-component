@@ -3,14 +3,12 @@
   "version": "0.2.1",
   "scripts": {
     "demo": "vue-cli-service serve",
-    "build:demo": "vue-cli-service build --target app --dest docs/demo ./src/main.ts",
-    "build:type": "tsc --emitDeclarationOnly --declaration -P tsconfig.types.json",
-    "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/components/index.ts",
-    "build": "run-s --print-label build:lib build:type build:demo",
+    "build:demo": "vue-cli-service build --target app --dest docs/demo ./src/main.js",
+    "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/components/index.js",
+    "build": "run-s --print-label build:lib build:demo",
     "lint": "vue-cli-service lint src"
   },
   "main": "./dist/kintone-vue-component.common.js",
-  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -25,21 +23,17 @@
     "vue-property-decorator": "^9.0.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.156",
-    "@typescript-eslint/eslint-plugin": "^3.4.0",
-    "@typescript-eslint/parser": "^3.4.0",
     "@vue/cli-plugin-babel": "^4.4.5",
     "@vue/cli-plugin-eslint": "^4.4.5",
-    "@vue/cli-plugin-typescript": "^4.4.5",
     "@vue/cli-service": "^4.4.5",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/eslint-config-typescript": "^5.0.2",
     "eslint": "^7.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
-    "typescript": "~3.9.5",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {

@@ -29,14 +29,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+<script>
 import KIconButton from '../components/KIconButton.vue';
 
-@Component({
+export default {
   components: {
     KIconButton
   }
-})
-export default class KIconButtonDemo extends Vue {}
+};
 </script>

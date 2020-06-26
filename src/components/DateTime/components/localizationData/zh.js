@@ -1,4 +1,3 @@
-import Locale from './locale-dto';
 export default {
   name: 'zh',
   monthNames: [
@@ -34,4 +33,4 @@ export default {
   weekDayMedium: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
   today: '今天',
   none: '清空'
-} as Locale;
+};

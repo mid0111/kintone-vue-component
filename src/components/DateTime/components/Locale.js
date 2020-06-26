@@ -5,9 +5,9 @@ import Message from '../../../constant/Message';
 
 const seperators = ['/', '-', ' ', ':'];
 
-const getSeperator = (dateFormatString: string) => {
+const getSeperator = (dateFormatString) => {
   let seperator = '';
-  seperators.forEach(char => {
+  seperators.forEach((char) => {
     if (dateFormatString.indexOf(char) !== -1) {
       seperator = char;
     }
@@ -18,7 +18,7 @@ const getSeperator = (dateFormatString: string) => {
   return seperator;
 };
 
-const getDateData = (dateObj: any, dateCode: string, locale: any) => {
+const getDateData = (dateObj, dateCode, locale) => {
   switch (dateCode) {
     case 'E':
       return locale.weekDayShort[dateObj.day];
@@ -63,11 +63,7 @@ const getDateData = (dateObj: any, dateCode: string, locale: any) => {
   }
 };
 
-const format = (
-  dirtyDate: Date,
-  dateFormat: string,
-  option: any = {}
-): string => {
+const format = (dirtyDate, dateFormat, option = {}) => {
   try {
     const dateObj = {
       millisecond: dirtyDate.getMilliseconds(),
@@ -96,7 +92,7 @@ const format = (
     }
     const seperator = getSeperator(dateFormat);
     let formattedDate = dateFormat.split(seperator);
-    formattedDate = formattedDate.map(item => {
+    formattedDate = formattedDate.map((item) => {
       return getDateData(dateObj, item, option.locale);
     });
     return formattedDate.join(seperator);
@@ -108,7 +104,7 @@ const format = (
 
 const availableLocales = 'ja, en, zh';
 
-const Locale: any = {
+const Locale = {
   en: en,
   zh: zh,
   ja: ja,

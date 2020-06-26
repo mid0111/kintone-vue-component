@@ -59,7 +59,7 @@ export default {
 
     isSelected(item) {
       return this.value
-        ? this.value.some(value => value === item.value)
+        ? this.value.some((value) => value === item.value)
         : false;
     },
 
