@@ -19,7 +19,7 @@ demo: k-label
 </template>
 ```
 
-## Attreibute
+## Attribute
 
 | Name            | Description                                                      | Type    | Required |
 | --------------- | ---------------------------------------------------------------- | ------- | -------- |

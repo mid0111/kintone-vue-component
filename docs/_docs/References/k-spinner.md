@@ -20,7 +20,7 @@ demo: k-spinner
 </template>
 ```
 
-## Attreibute
+## Attribute
 
 | Name    | Description                                                           | Type    | Required |
 | ------- | --------------------------------------------------------------------- | ------- | -------- |

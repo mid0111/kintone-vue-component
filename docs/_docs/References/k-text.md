@@ -28,7 +28,7 @@ export default {
 </script>
 ```
 
-## Attreibute
+## Attribute
 
 | Name        | Description                                                          | Type    | Required |
 | ----------- | -------------------------------------------------------------------- | ------- | -------- |
