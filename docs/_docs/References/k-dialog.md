@@ -45,6 +45,7 @@ export default {
 
 | Name    | Description                                                     | Type    | Required |
 | ------- | --------------------------------------------------------------- | ------- | -------- |
+| closeable  | ダイロアログにクローズボタンを表示するかどうか.<br>デフォルト値: 'true' | Boolean  | No       |
 | height  | ダイロアログの高さ.<br>指定がない場合は、画面いっぱいに表示する | Number  | No       |
 | visible | ダイロアログを表示するかどうか.<br>デフォルト値: 'true'         | Boolean | No       |
 

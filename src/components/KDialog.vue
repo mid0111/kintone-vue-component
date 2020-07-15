@@ -3,7 +3,7 @@
     <div class="k-dialog-wrapper">
       <div class="k-dialog-header">
         <slot name="header"></slot>
-        <span class="k-dialog-close-button">
+        <span v-if="closeable" class="k-dialog-close-button">
           <k-icon-button type="close" @click="onClose" />
         </span>
       </div>
@@ -40,6 +40,12 @@ export default {
     height: {
       type: Number,
       default: undefined,
+      required: false
+    },
+
+    closeable: {
+      type: Boolean,
+      default: true,
       required: false
     }
   },
