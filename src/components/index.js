@@ -1,3 +1,4 @@
+import KAlert from './KAlert.vue';
 import KButton from './KButton.vue';
 import KCheckbox from './KCheckbox.vue';
 import KDatePicker from './DateTime/KDatePicker.vue';
@@ -16,6 +17,7 @@ import KTextButton from './KTextButton.vue';
 import './common.scss';
 
 const components = {
+  KAlert,
   KButton,
   KCheckbox,
   KDatePicker,

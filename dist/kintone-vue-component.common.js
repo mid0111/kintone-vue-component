@@ -160,6 +160,17 @@ exports.f = DESCRIPTORS ? nativeGetOwnPropertyDescriptor : function getOwnProper
 
 /***/ }),
 
+/***/ "0875":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KAlert_vue_vue_type_style_index_0_id_9fae469c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ec5d");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KAlert_vue_vue_type_style_index_0_id_9fae469c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KAlert_vue_vue_type_style_index_0_id_9fae469c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_KAlert_vue_vue_type_style_index_0_id_9fae469c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "0a24":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3143,6 +3154,13 @@ module.exports = Array.isArray || function isArray(arg) {
   return classof(arg) == 'Array';
 };
 
+
+/***/ }),
+
+/***/ "ec5d":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -8583,357 +8601,26 @@ var es_object_keys = __webpack_require__("b64b");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
 var web_dom_collections_for_each = __webpack_require__("159b");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KButton.vue?vue&type=template&id=27617a62&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"k-btn",class:[_vm.typeClass, _vm.denseClass],attrs:{"disabled":_vm.disabled},on:{"click":function($event){$event.stopPropagation();return _vm.onClick($event)}}},[_vm._v(" "+_vm._s(_vm.text)+" ")])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KAlert.vue?vue&type=template&id=9fae469c&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"k-alert",class:{
+    'bg-success': _vm.type === 'success',
+    'bg-danger': _vm.type !== 'success',
+    show: _vm.visible
+  },attrs:{"role":"none"}},[_c('div',{staticClass:"float-right"},[_c('k-icon-button',{attrs:{"type":"close","color":"gray","size":"small"},on:{"click":_vm.onClose}})],1),_vm._v(" "+_vm._s(_vm.text)+" ")])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/KButton.vue?vue&type=template&id=27617a62&scoped=true&
+// CONCATENATED MODULE: ./src/components/KAlert.vue?vue&type=template&id=9fae469c&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KButton.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var KButtonvue_type_script_lang_js_ = ({
-  props: {
-    text: {
-      type: String,
-      default: '',
-      required: true
-    },
-    type: {
-      type: String,
-      default: 'normal',
-      required: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-      required: false
-    },
-    dense: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
-  },
-  computed: {
-    typeClass: function typeClass() {
-      return this.type === 'submit' ? 'submit' : 'normal';
-    },
-    denseClass: function denseClass() {
-      return this.dense ? 'dense' : undefined;
-    }
-  },
-  methods: {
-    onClick: function onClick() {
-      this.$emit('click');
-    }
-  }
-});
-// CONCATENATED MODULE: ./src/components/KButton.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_KButtonvue_type_script_lang_js_ = (KButtonvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/KButton.vue?vue&type=style&index=0&id=27617a62&scoped=true&lang=css&
-var KButtonvue_type_style_index_0_id_27617a62_scoped_true_lang_css_ = __webpack_require__("0a24");
-
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functional component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-// CONCATENATED MODULE: ./src/components/KButton.vue
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KIconButton.vue?vue&type=template&id=f84c389a&scoped=true&
+var KIconButtonvue_type_template_id_f84c389a_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"k-icon-btn",class:[_vm.sizeClass, _vm.typeClass, _vm.colorClass, _vm.shapeClass],attrs:{"disabled":_vm.disabled},on:{"click":function($event){$event.stopPropagation();return _vm.onClick($event)}}},[_c('svg',[_c('path',{attrs:{"d":_vm.iconData}})])])}
+var KIconButtonvue_type_template_id_f84c389a_scoped_true_staticRenderFns = []
 
 
-
-
-
-
-/* normalize component */
-
-var component = normalizeComponent(
-  components_KButtonvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  "27617a62",
-  null
-  
-)
-
-/* harmony default export */ var KButton = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KCheckbox.vue?vue&type=template&id=94f4ee38&scoped=true&
-var KCheckboxvue_type_template_id_94f4ee38_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"k-input-checkbox"},_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"k-input-checkbox-item"},[_c('input',{attrs:{"name":item.name,"id":_vm.id(index),"disabled":_vm.disabled === true ? _vm.disabled : item.disabled,"type":"checkbox"},domProps:{"checked":_vm.isSelected(item)},on:{"input":function($event){return _vm.onChange(item)}}}),_c('label',{attrs:{"for":_vm.id(index)}},[_vm._v(_vm._s(item.label || '')+" ")])])}),0)}
-var KCheckboxvue_type_template_id_94f4ee38_scoped_true_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/KCheckbox.vue?vue&type=template&id=94f4ee38&scoped=true&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.slice.js
-var es_array_slice = __webpack_require__("fb6a");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.some.js
-var es_array_some = __webpack_require__("45fc");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
-var es_array_splice = __webpack_require__("a434");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__("d3b7");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
-var es_regexp_to_string = __webpack_require__("25f0");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KCheckbox.vue?vue&type=script&lang=js&
-
-
-
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var KCheckboxvue_type_script_lang_js_ = ({
-  props: {
-    items: {
-      type: Array,
-      default: function _default() {
-        return [];
-      },
-      required: true
-    },
-    value: {
-      type: Array,
-      default: function _default() {
-        return [];
-      },
-      required: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
-  },
-  data: function data() {
-    return {
-      idPrefix: new Date().getTime() + '-' + this.generateGUID() + '-' + this.generateGUID() + this.generateGUID()
-    };
-  },
-  methods: {
-    generateGUID: function generateGUID() {
-      return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-    },
-    isSelected: function isSelected(item) {
-      return this.value ? this.value.some(function (value) {
-        return value === item.value;
-      }) : false;
-    },
-    id: function id(index) {
-      return this.idPrefix + index;
-    },
-    onChange: function onChange(item) {
-      var itemValue = item.value;
-      var value = this.value ? this.value.slice() : [];
-      var length = value.length;
-      var include = false;
-
-      for (var i = 0; i < length; i++) {
-        if (value[i] === itemValue) {
-          include = true;
-          value.splice(i, 1);
-          break;
-        }
-      }
-
-      if (!include) {
-        value.push(itemValue);
-      }
-
-      this.$emit('input', value);
-      this.$emit('change', value);
-    }
-  }
-});
-// CONCATENATED MODULE: ./src/components/KCheckbox.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_KCheckboxvue_type_script_lang_js_ = (KCheckboxvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/KCheckbox.vue?vue&type=style&index=0&id=94f4ee38&scoped=true&lang=css&
-var KCheckboxvue_type_style_index_0_id_94f4ee38_scoped_true_lang_css_ = __webpack_require__("53bf");
-
-// CONCATENATED MODULE: ./src/components/KCheckbox.vue
-
-
-
-
-
-
-/* normalize component */
-
-var KCheckbox_component = normalizeComponent(
-  components_KCheckboxvue_type_script_lang_js_,
-  KCheckboxvue_type_template_id_94f4ee38_scoped_true_render,
-  KCheckboxvue_type_template_id_94f4ee38_scoped_true_staticRenderFns,
-  false,
-  null,
-  "94f4ee38",
-  null
-  
-)
-
-/* harmony default export */ var KCheckbox = (KCheckbox_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/DateTime/KDatePicker.vue?vue&type=template&id=7253dcb7&
-var KDatePickervue_type_template_id_7253dcb7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"wrapperRef",staticClass:"date-time-container"},[_c('div',{staticClass:"date-container"},[_c('div',{key:_vm.dateError,staticClass:"text-input-container"},[_c('input',{staticClass:"k-input-text text-input",attrs:{"type":"text","disabled":_vm.disabled},domProps:{"value":_vm.inputValue},on:{"focus":_vm.onFocus,"blur":_vm.onBlur,"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"tab",9,$event.key,"Tab")){ return null; }return _vm.onTabKeyDown($event)},"change":_vm.onChangeInput}})]),(_vm.dateError && _vm.showPickerError)?_c('div',{staticClass:"label-error"},[_c('span',[_vm._v(_vm._s(_vm.dateError))])]):_vm._e(),(!_vm.disabled)?_c('Calendar',{ref:"calendarRef",attrs:{"pickerDisplay":_vm.pickerDisplay,"date":_vm.timeDateValue,"locale":_vm.localeObj,"hasSelection":_vm.hasSelection},on:{"click":_vm.onDateClick}}):_vm._e()],1)])}
-var KDatePickervue_type_template_id_7253dcb7_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/DateTime/KDatePicker.vue?vue&type=template&id=7253dcb7&
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/DateTime/components/Calendar.vue?vue&type=template&id=fd82f818&
-var Calendarvue_type_template_id_fd82f818_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"calRef",staticClass:"date-picker-container",style:({ display: _vm.pickerDisplay }),attrs:{"role":"presentation","tabindex":"-1"},on:{"blur":_vm.onBlur}},[_c('div',{staticClass:"header"},[_c('div',{staticClass:"month-year-container"},[_c('span',{staticClass:"prev calendar-button-control",attrs:{"role":"button"},on:{"click":_vm.onClickPrev,"keyup":_vm.onClickPrev}}),(_vm.locale === _vm.en)?_c('div',{ref:"dropDownsRowRef",staticClass:"k-calendar-dropdown-row"},[_c('k-dropdown',{attrs:{"items":_vm.getMonthLabels(_vm.locale),"value":_vm.getMonthLabels(_vm.locale)[_vm.displayDate.getMonth()].label},on:{"change":_vm.onChangeMonth}}),_c('k-dropdown',{attrs:{"items":_vm.getYearLabels(_vm.displayDate.getFullYear().toString(), _vm.locale),"value":_vm.format(_vm.displayDate, 'calendaryear', { locale: _vm.locale })},on:{"change":_vm.onChangeYearEn}})],1):_c('div',{ref:"dropDownsRowRef",staticClass:"k-calendar-dropdown-row"},[_c('k-dropdown',{attrs:{"items":_vm.getYearLabels(_vm.displayDate.getFullYear().toString(), _vm.locale),"value":_vm.format(_vm.displayDate, 'calendaryear', { locale: _vm.locale })},on:{"change":_vm.onChangeYear}}),_c('k-dropdown',{attrs:{"items":_vm.getMonthLabels(_vm.locale),"value":_vm.getMonthLabels(_vm.locale)[_vm.displayDate.getMonth()].label},on:{"change":_vm.onChangeMonth}})],1),_c('span',{staticClass:"next calendar-button-control",attrs:{"role":"button"},on:{"click":_vm.onClickNext,"keyup":_vm.onClickNext}})]),_c('div',{staticClass:"days-container"},[_vm._l((_vm.weekDayLabels),function(label,index){return _c('span',{key:("wday-header-" + index),staticClass:"wday-header",class:{ 'grayed-out': _vm.isWeekend(index) }},[_vm._v(_vm._s(label))])}),_vm._l((_vm.displayingDays),function(day,index){return _c('span',{key:("day-" + index),staticClass:"day calendar-button",class:{
-          'grayed-out': _vm.displayDate && _vm.isSameMonth(day, _vm.displayDate),
-          today: _vm.isToday(day),
-          selected: _vm.date && _vm.isSameDate(day, _vm.date) && _vm.hasSelection
-        },attrs:{"role":"button","tabindex":"0"},on:{"click":function($event){return _vm.onClickDay(day)},"keyup":function($event){return _vm.onClickDay(day)}}},[_vm._v(_vm._s(_vm.format(day, 'd')))])})],2),_c('div',{staticClass:"quick-selections-container"},[_c('span',{staticClass:"today calendar-button-control",attrs:{"role":"button","tabindex":"0"},on:{"click":_vm.onClickToday,"keyup":_vm.onClickToday}},[_vm._v(_vm._s(_vm.locale.today))]),_c('span',{staticClass:"none calendar-button-control",attrs:{"role":"button","tabindex":"0"},on:{"click":_vm.onClickClear,"keyup":_vm.onClickClear}},[_vm._v(_vm._s(_vm.locale.none))])])])])}
-var Calendarvue_type_template_id_fd82f818_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/DateTime/components/Calendar.vue?vue&type=template&id=fd82f818&
+// CONCATENATED MODULE: ./src/components/KIconButton.vue?vue&type=template&id=f84c389a&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__("ac1f");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__("5319");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KDropdown.vue?vue&type=template&id=0c18a89d&scoped=true&
-var KDropdownvue_type_template_id_0c18a89d_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"k-dropdown-container"},[_c('div',{staticClass:"k-dropdown-sub-container"},[_c('div',{ref:"dropdownOuter",staticClass:"k-dropdown-outer",on:{"click":_vm.toggleShowItems}},[_c('div',{staticClass:"k-dropdown",class:{ 'k-dropdown-disable': _vm.disabled }},[_c('div',{staticClass:"k-dropdown-selected"},[_c('span',{staticClass:"k-dropdown-selected-name"},[_c('span',{staticClass:"k-dropdown-selected-label"},[_vm._v(_vm._s(_vm.selected))]),_c('span',{staticClass:"icon-arrow-down"},[_c('svg',[_c('path',{attrs:{"d":_vm.mdiChevronDown}})])])])])])]),_c('div',{staticClass:"k-list-outer",style:([_vm.displayStyle, _vm.listHeightStyle])},_vm._l((_vm.items),function(item,i){return _c('k-item',{key:i,attrs:{"selected":_vm.value === item.value,"label":item.label,"value":item.value},on:{"click":_vm.onClickItem}})}),1)])])}
-var KDropdownvue_type_template_id_0c18a89d_scoped_true_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/KDropdown.vue?vue&type=template&id=0c18a89d&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/@mdi/js/mdi.js
 // Material Design Icons v5.3.45
@@ -14283,6 +13970,563 @@ var mdiZodiacScorpio = "M17.71,15.29L16.29,16.71L17.59,18H16A2,2 0 0,1 14,16V6A3
 var mdiZodiacTaurus = "M15.59,9C17.7,7.74 19,5.46 19,3H17A5,5 0 0,1 12,8A5,5 0 0,1 7,3H5C5,5.46 6.3,7.74 8.41,9C5.09,11 4,15.28 6,18.6C7.97,21.92 12.27,23 15.59,21C18.91,19.04 20,14.74 18,11.42C17.42,10.43 16.58,9.59 15.59,9M12,20A5,5 0 0,1 7,15A5,5 0 0,1 12,10A5,5 0 0,1 17,15A5,5 0 0,1 12,20Z";
 var mdiZodiacVirgo = "M18.5,19.13C20,17.77 20,15.18 20,14A4,4 0 0,0 16,10C15.3,10 14.6,10.2 14,10.56V6A3,3 0 0,0 11,3C10.25,3 9.55,3.29 9,3.78C7.86,2.76 6.14,2.76 5,3.78C4.45,3.28 3.74,3 3,3V5A1,1 0 0,1 4,6V16H6V6A1,1 0 0,1 7,5A1,1 0 0,1 8,6V16H10V6A1,1 0 0,1 11,5A1,1 0 0,1 12,6V14C12,15.18 12,17.77 13.5,19.13C12.72,19.54 11.88,19.84 11,20V22C12.29,22 14.84,20.74 16,20.13C17.16,20.74 19.71,22 21,22V20C20.12,19.84 19.28,19.54 18.5,19.13M16,12A2,2 0 0,1 18,14C18,16.92 17.46,18 16,18C14.54,18 14,16.92 14,14A2,2 0 0,1 16,12Z";
 
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KIconButton.vue?vue&type=script&lang=js&
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var KIconButtonvue_type_script_lang_js_ = ({
+  props: {
+    type: {
+      type: String,
+      default: 'insert',
+      required: false
+    },
+    size: {
+      type: String,
+      default: 'medium',
+      required: false
+    },
+    color: {
+      type: String,
+      default: 'gray',
+      required: false
+    },
+    shape: {
+      type: String,
+      default: 'circle',
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      required: false
+    }
+  },
+  computed: {
+    sizeClass: function sizeClass() {
+      var className = 'medium';
+
+      if (this.size === 'small' || this.size === 'x-small') {
+        className = this.size;
+      }
+
+      return className;
+    },
+    typeClass: function typeClass() {
+      return this.type === 'remove' && this.colorClass === 'gray' ? 'hover-danger' : '';
+    },
+    colorClass: function colorClass() {
+      var colors = ['gray', 'blue', 'red', 'green', 'transparent'];
+
+      if (!this.color) {
+        return 'gray';
+      }
+
+      return colors.indexOf(this.color) === -1 ? 'gray' : this.color;
+    },
+    shapeClass: function shapeClass() {
+      return this.shape === 'normal' ? 'normal' : 'circle';
+    },
+    iconData: function iconData() {
+      var iconData = mdiPlus;
+
+      switch (this.type) {
+        case 'insert':
+          break;
+
+        case 'remove':
+          iconData = mdiMinus;
+          break;
+
+        case 'close':
+          iconData = mdiClose;
+          break;
+
+        case 'file':
+          iconData = mdiFile;
+          break;
+
+        case 'right':
+          iconData = mdiChevronRight;
+          break;
+
+        case 'left':
+          iconData = mdiChevronLeft;
+          break;
+
+        default:
+          iconData = mdi_namespaceObject[this.type];
+          break;
+      }
+
+      return iconData;
+    }
+  },
+  methods: {
+    onClick: function onClick() {
+      this.$emit('click');
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/KIconButton.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_KIconButtonvue_type_script_lang_js_ = (KIconButtonvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/KIconButton.vue?vue&type=style&index=0&id=f84c389a&scoped=true&lang=css&
+var KIconButtonvue_type_style_index_0_id_f84c389a_scoped_true_lang_css_ = __webpack_require__("7eba");
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functional component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./src/components/KIconButton.vue
+
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  components_KIconButtonvue_type_script_lang_js_,
+  KIconButtonvue_type_template_id_f84c389a_scoped_true_render,
+  KIconButtonvue_type_template_id_f84c389a_scoped_true_staticRenderFns,
+  false,
+  null,
+  "f84c389a",
+  null
+  
+)
+
+/* harmony default export */ var KIconButton = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KAlert.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var KAlertvue_type_script_lang_js_ = ({
+  props: {
+    text: {
+      type: String,
+      default: '',
+      required: true
+    },
+    type: {
+      type: String,
+      default: 'error',
+      required: false
+    },
+    visible: {
+      type: Boolean,
+      default: true,
+      required: false
+    }
+  },
+  components: {
+    KIconButton: KIconButton
+  },
+  methods: {
+    onClose: function onClose() {
+      this.$emit('close');
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/KAlert.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_KAlertvue_type_script_lang_js_ = (KAlertvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/KAlert.vue?vue&type=style&index=0&id=9fae469c&scoped=true&lang=css&
+var KAlertvue_type_style_index_0_id_9fae469c_scoped_true_lang_css_ = __webpack_require__("0875");
+
+// CONCATENATED MODULE: ./src/components/KAlert.vue
+
+
+
+
+
+
+/* normalize component */
+
+var KAlert_component = normalizeComponent(
+  components_KAlertvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  "9fae469c",
+  null
+  
+)
+
+/* harmony default export */ var KAlert = (KAlert_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KButton.vue?vue&type=template&id=27617a62&scoped=true&
+var KButtonvue_type_template_id_27617a62_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"k-btn",class:[_vm.typeClass, _vm.denseClass],attrs:{"disabled":_vm.disabled},on:{"click":function($event){$event.stopPropagation();return _vm.onClick($event)}}},[_vm._v(" "+_vm._s(_vm.text)+" ")])}
+var KButtonvue_type_template_id_27617a62_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/KButton.vue?vue&type=template&id=27617a62&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KButton.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var KButtonvue_type_script_lang_js_ = ({
+  props: {
+    text: {
+      type: String,
+      default: '',
+      required: true
+    },
+    type: {
+      type: String,
+      default: 'normal',
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
+    dense: {
+      type: Boolean,
+      default: false,
+      required: false
+    }
+  },
+  computed: {
+    typeClass: function typeClass() {
+      return this.type === 'submit' ? 'submit' : 'normal';
+    },
+    denseClass: function denseClass() {
+      return this.dense ? 'dense' : undefined;
+    }
+  },
+  methods: {
+    onClick: function onClick() {
+      this.$emit('click');
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/KButton.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_KButtonvue_type_script_lang_js_ = (KButtonvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/KButton.vue?vue&type=style&index=0&id=27617a62&scoped=true&lang=css&
+var KButtonvue_type_style_index_0_id_27617a62_scoped_true_lang_css_ = __webpack_require__("0a24");
+
+// CONCATENATED MODULE: ./src/components/KButton.vue
+
+
+
+
+
+
+/* normalize component */
+
+var KButton_component = normalizeComponent(
+  components_KButtonvue_type_script_lang_js_,
+  KButtonvue_type_template_id_27617a62_scoped_true_render,
+  KButtonvue_type_template_id_27617a62_scoped_true_staticRenderFns,
+  false,
+  null,
+  "27617a62",
+  null
+  
+)
+
+/* harmony default export */ var KButton = (KButton_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KCheckbox.vue?vue&type=template&id=94f4ee38&scoped=true&
+var KCheckboxvue_type_template_id_94f4ee38_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"k-input-checkbox"},_vm._l((_vm.items),function(item,index){return _c('span',{key:index,staticClass:"k-input-checkbox-item"},[_c('input',{attrs:{"name":item.name,"id":_vm.id(index),"disabled":_vm.disabled === true ? _vm.disabled : item.disabled,"type":"checkbox"},domProps:{"checked":_vm.isSelected(item)},on:{"input":function($event){return _vm.onChange(item)}}}),_c('label',{attrs:{"for":_vm.id(index)}},[_vm._v(_vm._s(item.label || '')+" ")])])}),0)}
+var KCheckboxvue_type_template_id_94f4ee38_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/KCheckbox.vue?vue&type=template&id=94f4ee38&scoped=true&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.slice.js
+var es_array_slice = __webpack_require__("fb6a");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.some.js
+var es_array_some = __webpack_require__("45fc");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
+var es_array_splice = __webpack_require__("a434");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
+var es_object_to_string = __webpack_require__("d3b7");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
+var es_regexp_to_string = __webpack_require__("25f0");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KCheckbox.vue?vue&type=script&lang=js&
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var KCheckboxvue_type_script_lang_js_ = ({
+  props: {
+    items: {
+      type: Array,
+      default: function _default() {
+        return [];
+      },
+      required: true
+    },
+    value: {
+      type: Array,
+      default: function _default() {
+        return [];
+      },
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      required: false
+    }
+  },
+  data: function data() {
+    return {
+      idPrefix: new Date().getTime() + '-' + this.generateGUID() + '-' + this.generateGUID() + this.generateGUID()
+    };
+  },
+  methods: {
+    generateGUID: function generateGUID() {
+      return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    },
+    isSelected: function isSelected(item) {
+      return this.value ? this.value.some(function (value) {
+        return value === item.value;
+      }) : false;
+    },
+    id: function id(index) {
+      return this.idPrefix + index;
+    },
+    onChange: function onChange(item) {
+      var itemValue = item.value;
+      var value = this.value ? this.value.slice() : [];
+      var length = value.length;
+      var include = false;
+
+      for (var i = 0; i < length; i++) {
+        if (value[i] === itemValue) {
+          include = true;
+          value.splice(i, 1);
+          break;
+        }
+      }
+
+      if (!include) {
+        value.push(itemValue);
+      }
+
+      this.$emit('input', value);
+      this.$emit('change', value);
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/KCheckbox.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_KCheckboxvue_type_script_lang_js_ = (KCheckboxvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/KCheckbox.vue?vue&type=style&index=0&id=94f4ee38&scoped=true&lang=css&
+var KCheckboxvue_type_style_index_0_id_94f4ee38_scoped_true_lang_css_ = __webpack_require__("53bf");
+
+// CONCATENATED MODULE: ./src/components/KCheckbox.vue
+
+
+
+
+
+
+/* normalize component */
+
+var KCheckbox_component = normalizeComponent(
+  components_KCheckboxvue_type_script_lang_js_,
+  KCheckboxvue_type_template_id_94f4ee38_scoped_true_render,
+  KCheckboxvue_type_template_id_94f4ee38_scoped_true_staticRenderFns,
+  false,
+  null,
+  "94f4ee38",
+  null
+  
+)
+
+/* harmony default export */ var KCheckbox = (KCheckbox_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/DateTime/KDatePicker.vue?vue&type=template&id=7253dcb7&
+var KDatePickervue_type_template_id_7253dcb7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"wrapperRef",staticClass:"date-time-container"},[_c('div',{staticClass:"date-container"},[_c('div',{key:_vm.dateError,staticClass:"text-input-container"},[_c('input',{staticClass:"k-input-text text-input",attrs:{"type":"text","disabled":_vm.disabled},domProps:{"value":_vm.inputValue},on:{"focus":_vm.onFocus,"blur":_vm.onBlur,"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"tab",9,$event.key,"Tab")){ return null; }return _vm.onTabKeyDown($event)},"change":_vm.onChangeInput}})]),(_vm.dateError && _vm.showPickerError)?_c('div',{staticClass:"label-error"},[_c('span',[_vm._v(_vm._s(_vm.dateError))])]):_vm._e(),(!_vm.disabled)?_c('Calendar',{ref:"calendarRef",attrs:{"pickerDisplay":_vm.pickerDisplay,"date":_vm.timeDateValue,"locale":_vm.localeObj,"hasSelection":_vm.hasSelection},on:{"click":_vm.onDateClick}}):_vm._e()],1)])}
+var KDatePickervue_type_template_id_7253dcb7_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/DateTime/KDatePicker.vue?vue&type=template&id=7253dcb7&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/DateTime/components/Calendar.vue?vue&type=template&id=fd82f818&
+var Calendarvue_type_template_id_fd82f818_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"calRef",staticClass:"date-picker-container",style:({ display: _vm.pickerDisplay }),attrs:{"role":"presentation","tabindex":"-1"},on:{"blur":_vm.onBlur}},[_c('div',{staticClass:"header"},[_c('div',{staticClass:"month-year-container"},[_c('span',{staticClass:"prev calendar-button-control",attrs:{"role":"button"},on:{"click":_vm.onClickPrev,"keyup":_vm.onClickPrev}}),(_vm.locale === _vm.en)?_c('div',{ref:"dropDownsRowRef",staticClass:"k-calendar-dropdown-row"},[_c('k-dropdown',{attrs:{"items":_vm.getMonthLabels(_vm.locale),"value":_vm.getMonthLabels(_vm.locale)[_vm.displayDate.getMonth()].label},on:{"change":_vm.onChangeMonth}}),_c('k-dropdown',{attrs:{"items":_vm.getYearLabels(_vm.displayDate.getFullYear().toString(), _vm.locale),"value":_vm.format(_vm.displayDate, 'calendaryear', { locale: _vm.locale })},on:{"change":_vm.onChangeYearEn}})],1):_c('div',{ref:"dropDownsRowRef",staticClass:"k-calendar-dropdown-row"},[_c('k-dropdown',{attrs:{"items":_vm.getYearLabels(_vm.displayDate.getFullYear().toString(), _vm.locale),"value":_vm.format(_vm.displayDate, 'calendaryear', { locale: _vm.locale })},on:{"change":_vm.onChangeYear}}),_c('k-dropdown',{attrs:{"items":_vm.getMonthLabels(_vm.locale),"value":_vm.getMonthLabels(_vm.locale)[_vm.displayDate.getMonth()].label},on:{"change":_vm.onChangeMonth}})],1),_c('span',{staticClass:"next calendar-button-control",attrs:{"role":"button"},on:{"click":_vm.onClickNext,"keyup":_vm.onClickNext}})]),_c('div',{staticClass:"days-container"},[_vm._l((_vm.weekDayLabels),function(label,index){return _c('span',{key:("wday-header-" + index),staticClass:"wday-header",class:{ 'grayed-out': _vm.isWeekend(index) }},[_vm._v(_vm._s(label))])}),_vm._l((_vm.displayingDays),function(day,index){return _c('span',{key:("day-" + index),staticClass:"day calendar-button",class:{
+          'grayed-out': _vm.displayDate && _vm.isSameMonth(day, _vm.displayDate),
+          today: _vm.isToday(day),
+          selected: _vm.date && _vm.isSameDate(day, _vm.date) && _vm.hasSelection
+        },attrs:{"role":"button","tabindex":"0"},on:{"click":function($event){return _vm.onClickDay(day)},"keyup":function($event){return _vm.onClickDay(day)}}},[_vm._v(_vm._s(_vm.format(day, 'd')))])})],2),_c('div',{staticClass:"quick-selections-container"},[_c('span',{staticClass:"today calendar-button-control",attrs:{"role":"button","tabindex":"0"},on:{"click":_vm.onClickToday,"keyup":_vm.onClickToday}},[_vm._v(_vm._s(_vm.locale.today))]),_c('span',{staticClass:"none calendar-button-control",attrs:{"role":"button","tabindex":"0"},on:{"click":_vm.onClickClear,"keyup":_vm.onClickClear}},[_vm._v(_vm._s(_vm.locale.none))])])])])}
+var Calendarvue_type_template_id_fd82f818_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/DateTime/components/Calendar.vue?vue&type=template&id=fd82f818&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
+var es_regexp_exec = __webpack_require__("ac1f");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
+var es_string_replace = __webpack_require__("5319");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KDropdown.vue?vue&type=template&id=0c18a89d&scoped=true&
+var KDropdownvue_type_template_id_0c18a89d_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"k-dropdown-container"},[_c('div',{staticClass:"k-dropdown-sub-container"},[_c('div',{ref:"dropdownOuter",staticClass:"k-dropdown-outer",on:{"click":_vm.toggleShowItems}},[_c('div',{staticClass:"k-dropdown",class:{ 'k-dropdown-disable': _vm.disabled }},[_c('div',{staticClass:"k-dropdown-selected"},[_c('span',{staticClass:"k-dropdown-selected-name"},[_c('span',{staticClass:"k-dropdown-selected-label"},[_vm._v(_vm._s(_vm.selected))]),_c('span',{staticClass:"icon-arrow-down"},[_c('svg',[_c('path',{attrs:{"d":_vm.mdiChevronDown}})])])])])])]),_c('div',{staticClass:"k-list-outer",style:([_vm.displayStyle, _vm.listHeightStyle])},_vm._l((_vm.items),function(item,i){return _c('k-item',{key:i,attrs:{"selected":_vm.value === item.value,"label":item.label,"value":item.value},on:{"click":_vm.onClickItem}})}),1)])])}
+var KDropdownvue_type_template_id_0c18a89d_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/KDropdown.vue?vue&type=template&id=0c18a89d&scoped=true&
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KItem.vue?vue&type=template&id=499efff3&scoped=true&
 var KItemvue_type_template_id_499efff3_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"k-list-item",class:{ 'k-list-item-selected': _vm.selected },on:{"click":_vm.onClick}},[_c('span',{staticClass:"k-icon-check"},[_c('svg',[_c('path',{attrs:{"d":_vm.mdiCheckBold}})])]),_c('span',{staticClass:"k-list-item-label"},[_vm._v(_vm._s(_vm.label))])])}
 var KItemvue_type_template_id_499efff3_scoped_true_staticRenderFns = []
@@ -15378,149 +15622,6 @@ var KDialogvue_type_template_id_ad0c354c_scoped_true_staticRenderFns = []
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d6b5b330-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KIconButton.vue?vue&type=template&id=f84c389a&scoped=true&
-var KIconButtonvue_type_template_id_f84c389a_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"k-icon-btn",class:[_vm.sizeClass, _vm.typeClass, _vm.colorClass, _vm.shapeClass],attrs:{"disabled":_vm.disabled},on:{"click":function($event){$event.stopPropagation();return _vm.onClick($event)}}},[_c('svg',[_c('path',{attrs:{"d":_vm.iconData}})])])}
-var KIconButtonvue_type_template_id_f84c389a_scoped_true_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/KIconButton.vue?vue&type=template&id=f84c389a&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KIconButton.vue?vue&type=script&lang=js&
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ var KIconButtonvue_type_script_lang_js_ = ({
-  props: {
-    type: {
-      type: String,
-      default: 'insert',
-      required: false
-    },
-    size: {
-      type: String,
-      default: 'medium',
-      required: false
-    },
-    color: {
-      type: String,
-      default: 'gray',
-      required: false
-    },
-    shape: {
-      type: String,
-      default: 'circle',
-      required: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-      required: false
-    }
-  },
-  computed: {
-    sizeClass: function sizeClass() {
-      var className = 'medium';
-
-      if (this.size === 'small' || this.size === 'x-small') {
-        className = this.size;
-      }
-
-      return className;
-    },
-    typeClass: function typeClass() {
-      return this.type === 'remove' && this.colorClass === 'gray' ? 'hover-danger' : '';
-    },
-    colorClass: function colorClass() {
-      var colors = ['gray', 'blue', 'red', 'green', 'transparent'];
-
-      if (!this.color) {
-        return 'gray';
-      }
-
-      return colors.indexOf(this.color) === -1 ? 'gray' : this.color;
-    },
-    shapeClass: function shapeClass() {
-      return this.shape === 'normal' ? 'normal' : 'circle';
-    },
-    iconData: function iconData() {
-      var iconData = mdiPlus;
-
-      switch (this.type) {
-        case 'insert':
-          break;
-
-        case 'remove':
-          iconData = mdiMinus;
-          break;
-
-        case 'close':
-          iconData = mdiClose;
-          break;
-
-        case 'file':
-          iconData = mdiFile;
-          break;
-
-        case 'right':
-          iconData = mdiChevronRight;
-          break;
-
-        case 'left':
-          iconData = mdiChevronLeft;
-          break;
-
-        default:
-          iconData = mdi_namespaceObject[this.type];
-          break;
-      }
-
-      return iconData;
-    }
-  },
-  methods: {
-    onClick: function onClick() {
-      this.$emit('click');
-    }
-  }
-});
-// CONCATENATED MODULE: ./src/components/KIconButton.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_KIconButtonvue_type_script_lang_js_ = (KIconButtonvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/KIconButton.vue?vue&type=style&index=0&id=f84c389a&scoped=true&lang=css&
-var KIconButtonvue_type_style_index_0_id_f84c389a_scoped_true_lang_css_ = __webpack_require__("7eba");
-
-// CONCATENATED MODULE: ./src/components/KIconButton.vue
-
-
-
-
-
-
-/* normalize component */
-
-var KIconButton_component = normalizeComponent(
-  components_KIconButtonvue_type_script_lang_js_,
-  KIconButtonvue_type_template_id_f84c389a_scoped_true_render,
-  KIconButtonvue_type_template_id_f84c389a_scoped_true_staticRenderFns,
-  false,
-  null,
-  "f84c389a",
-  null
-  
-)
-
-/* harmony default export */ var KIconButton = (KIconButton_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/KDialog.vue?vue&type=script&lang=js&
 
 //
@@ -16240,7 +16341,9 @@ var common = __webpack_require__("7af4");
 
 
 
+
 var components = {
+  KAlert: KAlert,
   KButton: KButton,
   KCheckbox: KCheckbox,
   KDatePicker: KDatePicker,

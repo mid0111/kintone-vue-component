@@ -4,6 +4,9 @@
     <navigation :components="components" />
 
     <div class="main-container">
+      <component-title title="k-alert" />
+      <k-alert-demo />
+
       <component-title title="k-button" />
       <k-button-demo />
 
@@ -51,6 +54,7 @@ import './components';
 
 import Navigation from './demo/Navigation.vue';
 import ComponentTitle from './demo/ComponentTitle.vue';
+import KAlertDemo from './demo/KAlertDemo.vue';
 import KButtonDemo from './demo/KButtonDemo.vue';
 import KCheckboxDemo from './demo/KCheckboxDemo.vue';
 import KDatePickerDemo from './demo/KDatePickerDemo.vue';
@@ -70,6 +74,7 @@ export default {
   components: {
     Navigation,
     ComponentTitle,
+    KAlertDemo,
     KButtonDemo,
     KCheckboxDemo,
     KDatePickerDemo,
@@ -88,6 +93,7 @@ export default {
   data() {
     return {
       components: [
+        'k-alert',
         'k-button',
         'k-checkbox',
         'k-date-picker',
