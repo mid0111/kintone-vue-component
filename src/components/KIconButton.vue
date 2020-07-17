@@ -120,7 +120,7 @@ export default {
   outline: none;
   position: relative;
 }
-.k-icon-btn svg {
+.k-icon-btn:not(.shape-none) svg {
   position: absolute;
   top: 4px;
   left: 4px;
@@ -153,9 +153,19 @@ export default {
   width: 24px;
   height: 24px;
 }
+.k-icon-btn.medium.shape-none svg {
+  width: 24px;
+  height: 24px;
+  transform: scale(1.33);
+}
 .k-icon-btn.small svg {
   transform: scale(0.75);
   transform-origin: -4px -4px;
+}
+.k-icon-btn.small.shape-none svg {
+  width: 24px;
+  height: 24px;
+  transform: scale(1);
 }
 .k-icon-btn.x-small {
   width: 16px;
@@ -166,6 +176,9 @@ export default {
   height: 24px;
   transform: scale(0.5);
   transform-origin: -4px -4px;
+}
+.k-icon-btn.x-small.shape-none svg {
+  transform: scale(0.75);
 }
 .k-icon-btn.shape-none {
   background-color: transparent !important;
