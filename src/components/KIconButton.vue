@@ -67,7 +67,11 @@ export default {
     },
 
     shapeClass() {
-      return this.shape === 'normal' ? 'normal' : 'circle';
+      return this.shape === 'normal'
+        ? 'normal'
+        : this.shape === 'none'
+        ? 'shape-none'
+        : 'circle';
     },
 
     iconData() {
@@ -162,6 +166,33 @@ export default {
   height: 24px;
   transform: scale(0.5);
   transform-origin: -4px -4px;
+}
+.k-icon-btn.shape-none {
+  background-color: transparent !important;
+}
+.k-icon-btn.shape-none svg path {
+  fill: #9e9e9e;
+}
+.k-icon-btn.shape-none:hover svg path {
+  fill: #8f8f8f;
+}
+.k-icon-btn.shape-none.blue svg path {
+  fill: #2d8dd6;
+}
+.k-icon-btn.shape-none.blue:hover svg path {
+  fill: #1a649b;
+}
+.k-icon-btn.shape-none.red svg path {
+  fill: #e44234;
+}
+.k-icon-btn.shape-none.red:hover svg path {
+  fill: #d03d30;
+}
+.k-icon-btn.shape-none.green svg path {
+  fill: #86bb61;
+}
+.k-icon-btn.shape-none.green:hover svg path {
+  fill: #5f973a;
 }
 .k-icon-btn.blue {
   background-color: #2d8dd6;

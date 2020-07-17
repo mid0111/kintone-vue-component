@@ -30,7 +30,7 @@ demo: k-icon-button
 | -------- | --------------------------------------------------------------------------------------------------------- | ------- | -------- |
 | color    | ボタンの色.<br>・gray<br>・blue<br>・red<br>・green<br>・transparent<br>デフォルト値: 'gray'              | String  | No       |
 | disabled | disabled にするかどうか.<br>デフォルト値: false                                                           | Boolean | No       |
-| shape    | ボタンの形.<br>・circle<br>・normal<br>デフォルト値: 'circle'                                             | String  | No       |
+| shape    | ボタンの形.<br>・circle<br>・normal<br>・none<br>デフォルト値: 'circle'                                             | String  | No       |
 | size     | ボタンのサイズ.<br>・medium<br>・small<br>・x-small<br>デフォルト値: 'medium'                             | String  | No       |
 | type     | ボタンの種類.<br>・insert<br>・remove<br>・close<br>・file<br>・right<br>・left<br>・<a href="https://materialdesignicons.com/">マテリアルアイコン</a>のプロパティ名 | String  | No       |
 
