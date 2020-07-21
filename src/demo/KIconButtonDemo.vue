@@ -12,13 +12,18 @@
     </div>
     <h3>square</h3>
     <div class="box">
-      <k-icon-button shape="normal" type="insert" color="blue" />
-      <k-icon-button shape="normal" type="remove" color="red" />
-      <k-icon-button shape="normal" type="close" color="gray" />
-      <k-icon-button shape="normal" type="file" color="green" />
-      <k-icon-button shape="normal" type="right" color="gray" />
-      <k-icon-button shape="normal" type="left" color="transparent" />
-      <k-icon-button shape="normal" type="mdiMagnify" />
+      <k-icon-button size="x-small" shape="none" type="insert" color="blue" />
+      <k-icon-button size="x-small" shape="none" type="remove" color="red" />
+      <k-icon-button size="x-small" shape="none" type="close" color="gray" />
+      <k-icon-button size="x-small" shape="none" type="file" color="green" />
+      <k-icon-button size="x-small" shape="none" type="right" color="gray" />
+      <k-icon-button
+        size="x-small"
+        shape="none"
+        type="left"
+        color="transparent"
+      />
+      <k-icon-button size="x-small" shape="normal" type="mdiMagnify" />
     </div>
     <h3>size</h3>
     <div class="box">
