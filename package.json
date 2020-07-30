@@ -1,6 +1,21 @@
 {
   "name": "kintone-vue-component",
   "version": "0.2.2",
+  "description": "Kintone のデザインに合わせた Vue コンポーネントです。",
+  "keywords": [
+    "kintone",
+    "vue",
+    "component"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "mid0111",
+    "url": "https://github.com/mid0111"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mid0111/kintone-vue-component"
+  },
   "scripts": {
     "demo": "vue-cli-service serve",
     "build:demo": "vue-cli-service build --target app --dest docs/demo ./src/main.js",
