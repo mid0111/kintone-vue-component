@@ -1,7 +1,7 @@
 <template>
   <div class="components">
     <h3>basic</h3>
-    <div class="clearfix">
+    <div class="kvc-clearfix">
       <k-checkbox :items="items" v-model="value" />
     </div>
   </div>

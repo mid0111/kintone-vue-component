@@ -279,7 +279,7 @@ export default {
   height: 100%;
 }
 
-.k-dropdown-outer {
+.date-picker-container .k-dropdown-outer {
   padding: 5px;
 }
 
@@ -332,7 +332,7 @@ export default {
   outline: none;
 }
 
-.k-calendar-dropdown-row {
+.date-picker-container .k-calendar-dropdown-row {
   display: inline-flex;
   justify-content: center;
   flex-basis: calc(100% - 48px);
@@ -347,11 +347,11 @@ export default {
   box-sizing: border-box;
 }
 
-span.day {
+.date-picker-container span.day {
   outline: none;
 }
 
-.calendar-button-control {
+.date-picker-container .calendar-button-control {
   background-color: transparent;
   border: none;
   outline: none;

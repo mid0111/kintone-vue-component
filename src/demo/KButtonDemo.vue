@@ -1,9 +1,9 @@
 <template>
   <div class="components">
     <h3>basic</h3>
-    <div class="clearfix">
+    <div class="kvc-clearfix">
       <k-button
-        class="float-left mr-2"
+        class="kvc-float-left mr-2"
         text="保存"
         type="submit"
         @click="onClick"

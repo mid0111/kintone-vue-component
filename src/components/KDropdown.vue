@@ -222,7 +222,7 @@ export default {
 }
 
 .k-list-outer {
-  margin-top: -6px;
+  margin-top: 0;
   padding: 12px 0 0 0;
   border: 1px solid #e3e7e8;
   background-color: #fff;

@@ -8,7 +8,7 @@
       show: visible
     }"
   >
-    <div class="float-right">
+    <div class="kvc-float-right">
       <k-icon-button type="close" color="gray" size="small" @click="onClose" />
     </div>
     {{ text }}

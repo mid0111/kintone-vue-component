@@ -55,18 +55,13 @@
 }
 
 /* Utility */
-.d-inline-block {
-  display: inline-block !important;
-  vertical-align: middle;
-}
-
-.float-left {
+.kvc-float-left {
   float: left;
 }
-.float-right {
+.kvc-float-right {
   float: right;
 }
-.clearfix::after {
+.kvc-clearfix::after {
   content: '';
   display: block;
   clear: both;
