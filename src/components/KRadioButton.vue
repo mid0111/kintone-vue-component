@@ -11,7 +11,7 @@
         :disabled="disabled === true ? disabled : item.disabled"
         type="radio"
         :checked="isSelected(item)"
-        @input="onChange(item)"
+        @change="onChange(item)"
       />
       <label :for="id(index)">{{ item.label || '' }} </label>
     </span>
@@ -58,7 +58,7 @@ export default {
     },
 
     isSelected(item) {
-      return this.value === item.value;
+      return this.value === item.value ? 'checked' : 0;
     },
 
     id(index) {
