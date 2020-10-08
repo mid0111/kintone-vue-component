@@ -1,5 +1,5 @@
 <template>
-  <div class="date-time-container" ref="wrapperRef">
+  <div class="kvc-date-time-container" ref="wrapperRef">
     <div class="date-container">
       <div class="text-input-container" :key="dateError">
         <input
@@ -182,13 +182,13 @@ export default {
 };
 </script>
 <style>
-.date-time-container {
+.kvc-date-time-container {
   display: inline-flex;
   /* font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo,
     sans-serif; */
 }
 
-.date-time-container .text-input {
+.kvc-date-time-container .text-input {
   width: 100px;
   height: 40px;
   margin: 0;
@@ -202,11 +202,11 @@ export default {
   box-sizing: border-box;
 }
 
-.date-time-container .text-input.time {
+.kvc-date-time-container .text-input.time {
   width: 80px;
 }
 
-.date-time-container .text-input:focus {
+.kvc-date-time-container .text-input:focus {
   border-color: #3498db;
   box-shadow: 2px 2px 4px #f5f5f5 inset, -2px -2px 4px #f5f5f5 inset;
   border: 1px solid #3498db;
@@ -214,8 +214,7 @@ export default {
   color: #333;
 }
 
-.date-time-container .date-picker-container,
-.time-picker-container {
+.kvc-date-time-container .kvc-date-picker-container {
   position: absolute;
   width: 350px;
   background: #fff;
@@ -227,16 +226,8 @@ export default {
   z-index: 2000;
 }
 
-.time-picker-container {
-  width: 250px;
-  padding: 0;
-  flex-flow: row wrap;
-  overflow-y: scroll;
-  height: 180px;
-}
-
-.date-time-container .month-year-container,
-.date-time-container .quick-selections-container {
+.kvc-date-time-container .month-year-container,
+.kvc-date-time-container .quick-selections-container {
   position: relative;
   line-height: 16px;
   height: 32px;
@@ -250,7 +241,7 @@ export default {
   user-select: none;
 }
 
-.month-year-container .label {
+.kvc-date-time-container .month-year-container .label {
   outline: initial;
   -webkit-touch-callout: initial;
   -webkit-user-select: initial;
@@ -260,20 +251,20 @@ export default {
   user-select: text;
 }
 
-.date-time-container .month-year-container {
+.kvc-date-time-container .month-year-container {
   text-transform: uppercase;
   border-bottom: 1px solid #e3e7e8;
   display: flex;
 }
 
-.date-time-container .month-year-container .label {
+.kvc-date-time-container .month-year-container .label {
   color: #333;
   font-weight: bold;
   line-height: 20px;
 }
 
-.date-time-container .month-year-container .prev,
-.date-time-container .month-year-container .next {
+.kvc-date-time-container .month-year-container .prev,
+.kvc-date-time-container .month-year-container .next {
   position: relative;
   display: inline-flex;
   width: 24px;
@@ -286,26 +277,26 @@ export default {
   cursor: pointer;
 }
 
-.date-time-container .month-year-container .prev {
+.kvc-date-time-container .month-year-container .prev {
   text-align: start;
 }
 
-.date-time-container .month-year-container .prev:before {
+.kvc-date-time-container .month-year-container .prev:before {
   content: '\2039';
   width: 24px;
 }
 
-.date-time-container .month-year-container .next {
+.kvc-date-time-container .month-year-container .next {
   text-align: end;
 }
 
-.date-time-container .month-year-container .next:before {
+.kvc-date-time-container .month-year-container .next:before {
   content: '\203A';
   width: 24px;
 }
 
-.date-time-container .quick-selections-container .today,
-.date-time-container .quick-selections-container .none {
+.kvc-date-time-container .quick-selections-container .today,
+.kvc-date-time-container .quick-selections-container .none {
   position: absolute;
   top: 10px;
   color: #3498db;
@@ -313,23 +304,23 @@ export default {
   cursor: pointer;
 }
 
-.date-time-container .quick-selections-container .today {
+.kvc-date-time-container .quick-selections-container .today {
   left: 0;
 }
 
-.date-time-container .quick-selections-container .none {
+.kvc-date-time-container .quick-selections-container .none {
   right: 0;
 }
 
-.date-time-container .days-container {
+.kvc-date-time-container .days-container {
   width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.date-time-container .days-container .day,
-.date-time-container .days-container .wday-header {
+.kvc-date-time-container .days-container .day,
+.kvc-date-time-container .days-container .wday-header {
   text-transform: uppercase;
   font-weight: normal;
   box-sizing: border-box;
@@ -341,23 +332,23 @@ export default {
   line-height: 15px;
 }
 
-.date-time-container .days-container .day {
+.kvc-date-time-container .days-container .day {
   cursor: pointer;
 }
-.date-time-container .days-container .day.today {
+.kvc-date-time-container .days-container .day.today {
   color: #fff;
   background: #9b9b9b;
 }
 
-.date-time-container .days-container .day.selected {
+.kvc-date-time-container .days-container .day.selected {
   border: 1px solid #3498db;
 }
 
-.date-time-container .days-container .grayed-out {
+.kvc-date-time-container .days-container .grayed-out {
   color: #babcbc;
 }
 
-.label-error {
+.kvc-date-time-container .label-error {
   background-color: #e54d41;
   color: #ffffff;
   margin: 8px 0;
@@ -367,7 +358,7 @@ export default {
   position: absolute;
 }
 
-.date-container {
+.kvc-date-time-container .date-container {
   display: inline-block;
 }
 </style>

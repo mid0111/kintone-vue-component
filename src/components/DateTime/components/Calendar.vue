@@ -2,7 +2,7 @@
   <div
     role="presentation"
     ref="calRef"
-    class="date-picker-container"
+    class="kvc-date-picker-container"
     :style="{ display: pickerDisplay }"
     @blur="onBlur"
     tabindex="-1"
@@ -63,7 +63,7 @@
           role="button"
           class="day calendar-button"
           :class="{
-            'grayed-out': displayDate && isSameMonth(day, displayDate),
+            'grayed-out': !displayDate || !isSameMonth(day, displayDate),
             today: isToday(day),
             selected: date && isSameDate(day, date) && hasSelection
           }"
@@ -273,36 +273,36 @@ export default {
 };
 </script>
 <style>
-.date-picker-container .k-dropdown-sub-container,
-.date-picker-container .k-dropdown-container,
-.date-picker-container .k-dropdown-outer {
+.kvc-date-picker-container .k-dropdown-sub-container,
+.kvc-date-picker-container .k-dropdown-container,
+.kvc-date-picker-container .k-dropdown-outer {
   height: 100%;
 }
 
-.date-picker-container .k-dropdown-outer {
+.kvc-date-picker-container .k-dropdown-outer {
   padding: 5px;
 }
 
-.date-picker-container .k-dropdown-selected-label {
+.kvc-date-picker-container .k-dropdown-selected-label {
   color: black;
   padding-left: 0ch;
   display: inline;
   font-weight: bold;
 }
 
-.date-picker-container .k-dropdown:hover {
+.kvc-date-picker-container .k-dropdown:hover {
   background-color: initial;
 }
 
-.date-picker-container .k-dropdown-selected {
+.kvc-date-picker-container .k-dropdown-selected {
   width: auto;
   text-align: left;
   padding-right: 22px;
   height: 22px;
 }
 
-.date-picker-container .k-dropdown,
-.date-picker-container .k-dropdown-selected-name {
+.kvc-date-picker-container .k-dropdown,
+.kvc-date-picker-container .k-dropdown-selected-name {
   color: #a2a2a2;
   background-color: white;
   font-size: 13px;
@@ -310,17 +310,17 @@ export default {
   line-height: 22px;
 }
 
-.date-picker-container .k-dropdown-selected-name .icon-arrow-down svg {
+.kvc-date-picker-container .k-dropdown-selected-name .icon-arrow-down svg {
   box-sizing: border-box;
   padding: 0;
   height: 26px;
 }
 
-.date-picker-container .k-dropdown-selected-name .icon-arrow-down svg path {
+.kvc-date-picker-container .k-dropdown-selected-name .icon-arrow-down svg path {
   fill: #a2a2a2;
 }
 
-.date-picker-container .k-list-outer {
+.kvc-date-picker-container .k-list-outer {
   outline: none;
   text-align: left;
   max-height: 300px;
@@ -328,11 +328,11 @@ export default {
   margin-top: 0;
 }
 
-.date-picker-container {
+.kvc-date-picker-container {
   outline: none;
 }
 
-.date-picker-container .k-calendar-dropdown-row {
+.kvc-date-picker-container .k-calendar-dropdown-row {
   display: inline-flex;
   justify-content: center;
   flex-basis: calc(100% - 48px);
@@ -342,16 +342,16 @@ export default {
   top: -7px;
 }
 
-.date-picker-container .k-dropdown-outer {
+.kvc-date-picker-container .k-dropdown-outer {
   border: solid 1px transparent;
   box-sizing: border-box;
 }
 
-.date-picker-container span.day {
+.kvc-date-picker-container span.day {
   outline: none;
 }
 
-.date-picker-container .calendar-button-control {
+.kvc-date-picker-container .calendar-button-control {
   background-color: transparent;
   border: none;
   outline: none;
