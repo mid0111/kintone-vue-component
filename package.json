@@ -1,6 +1,6 @@
 {
   "name": "kintone-vue-component",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "description": "Kintone のデザインに合わせた Vue コンポーネントです。",
   "author": {
     "name": "mid0111",
