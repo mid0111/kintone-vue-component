@@ -2,26 +2,16 @@
   "name": "kintone-vue-component",
   "version": "0.2.5",
   "description": "Kintone のデザインに合わせた Vue コンポーネントです。",
-  "keywords": [
-    "kintone",
-    "vue",
-    "component"
-  ],
-  "license": "MIT",
   "author": {
     "name": "mid0111",
     "url": "https://github.com/mid0111"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mid0111/kintone-vue-component"
-  },
   "scripts": {
-    "demo": "vue-cli-service serve",
+    "build": "run-s --print-label build:lib build:demo",
+    "lint": "vue-cli-service lint src",
     "build:demo": "vue-cli-service build --target app --dest docs/demo ./src/main.js",
     "build:lib": "vue-cli-service build --target lib --name kintone-vue-component --formats commonjs ./src/components/index.js",
-    "build": "run-s --print-label build:lib build:demo",
-    "lint": "vue-cli-service lint src"
+    "demo": "vue-cli-service serve"
   },
   "main": "./dist/kintone-vue-component.common.js",
   "files": [
@@ -38,26 +28,33 @@
     "vue-property-decorator": "^9.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.5",
-    "@vue/cli-plugin-eslint": "^4.5.5",
-    "@vue/cli-service": "^4.5.5",
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-plugin-eslint": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "eslint": "^7.8.1",
+    "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^10.3.0",
-    "node-sass": "^4.14.1",
     "prettier": "^2.1.1",
-    "sass-loader": "^10.0.2",
+    "sass": "^1.38.0",
+    "sass-loader": "^10.2.0",
     "vue-template-compiler": "^2.6.12"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
+  "keywords": [
+    "kintone",
+    "vue",
+    "component"
+  ],
+  "license": "MIT",
   "lint-staged": {
     "src/**/*.{js,jsx,vue,ts,tsx}": [
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mid0111/kintone-vue-component"
   }
 }
