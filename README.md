@@ -1,5 +1,7 @@
 # kintone-vue-component
 
+[![npm version](https://badge.fury.io/js/kintone-vue-component.svg)](https://badge.fury.io/js/kintone-vue-component)
+
 > Kintone のデザインに合わせた Vue コンポーネントです。  
 > [kintone/kintone-ui-component](https://github.com/kintone/kintone-ui-component) を元に作成した非公式ライブラリです。
 
