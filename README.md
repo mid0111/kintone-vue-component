@@ -39,5 +39,7 @@ npm run demo
 
 ```bash
 cd docs
+# 初回のみ
+bundle install
 bundle exec jekyll serve
 ```

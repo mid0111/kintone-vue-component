@@ -11,3 +11,5 @@ end
 group :development do
   gem 'bundler-audit'
 end
+
+gem "webrick", "~> 1.7"
