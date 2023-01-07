@@ -28,9 +28,9 @@
     "vue-property-decorator": "^9.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.13",
-    "@vue/cli-plugin-eslint": "~4.5.13",
-    "@vue/cli-service": "~4.5.13",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
     "@vue/eslint-config-prettier": "^6.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.4",
